@@ -74,9 +74,17 @@ menu .top-menu {
     border-bottom: 1px solid #fff;
 }
 menu .top-menu ul {
-    display: block;
+    display: flex;
     height: 55px;
     margin-bottom: 0;
+    justify-content: space-between;
+}
+menu .top-menu ul li a {
+    line-height: 55px;
+    height: 55px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
 }
 menu .top-menu ul li {
     height: 55px;
@@ -104,12 +112,16 @@ menu .top-menu ul a li.yellow {
 menu .top-menu ul li:hover {
     background: yellow;
 }
+menu .top-menu ul li:hover a{
+    color: #635a54;
+}
 menu .top-menu ul.level_two-menu li a {
     color: #fff;
 }
 menu .top-menu ul li:hover {
     color: #635a54;
 }
+
 menu .top-menu ul li:hover menu .top-menu ul.level_two-menu li a{
     color: #635a54;
 }
@@ -169,8 +181,7 @@ menu .top-menu ul.level_two-menu {
     transition: all .3s ease-in;
     display: none;
     margin-left: -15px;
-        position: absolute;
-    margin-top: 54px;
+    position: absolute;
     width: auto;
 }
 
@@ -193,12 +204,12 @@ menu .top-menu ul.level_two-menu li{
     text-transform: uppercase;
     height: 40px;
     line-height: 40px;
-    background: #57cbf5;
+    background: yellow;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .raspisanie .raspisanie-header p {
-    color: #fff;
+    color: #635a54;
     font-size: 26px
 }
 
@@ -207,7 +218,7 @@ menu .top-menu ul.level_two-menu li{
 }
 
 .raspisanie .raspisnanie-wrapper .information-wrapper {
-    width: 30%;
+    width: 34%;
     float: left;
 }
 .raspisanie .raspisnanie-wrapper .information-wrapper .tour-title {
@@ -217,24 +228,34 @@ menu .top-menu ul.level_two-menu li{
     padding: 10px;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 19px
+    font-size: 20px
 }
 .raspisanie .raspisnanie-wrapper .information-wrapper .information p span{
     font-weight: bold;
 }    
 .raspisanie .raspisnanie-wrapper .information-wrapper .information {
-    padding: 10px;
+    padding: 15px;
 }
 .raspisanie .raspisnanie-wrapper .information-wrapper .information p {
     line-height: 20px;
-    font-size: 16px;
+    font-size: 17px;
 }
 .raspisanie .raspisnanie-wrapper .information-wrapper .information p.price {
     margin-top: 40px;
-    font-size: 22px;
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 15px
+}
+.raspisanie .raspisnanie-wrapper .information-wrapper .tour-title span.tour-introtext  {
+    text-transform: none;
+    font-size: 16px;
+    display: block;
+    margin-top: 5px;
+    font-weight: normal;
 }
 .raspisanie .raspisnanie-wrapper .raspisanie-item .tour-back {
-    width: 70%;
+    width: 66%;
     float: right;
     height: 330px;
     background-size: cover;
@@ -245,6 +266,7 @@ menu .top-menu ul.level_two-menu li{
     cursor: pointer;
     transition: all .3s linear;
     margin-bottom: 15px;
+    position: relative;
 }
 .raspisanie .raspisnanie-wrapper .raspisanie-item:hover {
     -webkit-transform: scale(1.017);
@@ -264,6 +286,20 @@ menu .top-menu ul.level_two-menu li{
     }
 }
 @media (max-width: 768px) {
+    .raspisanie .raspisnanie-wrapper .information-wrapper .tour-title span.tour-introtext {
+        font-size: 14px;
+        
+    }
+    .raspisanie .raspisnanie-wrapper .information-wrapper .tour-title {
+        font-size: 19px;
+    }
+    menu .top-menu ul {
+        display: block;
+        height: 55px;
+        margin-bottom: 0;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
     .top-form {
        margin-top: 0;
     }
@@ -295,7 +331,7 @@ menu .top-menu ul.level_two-menu li{
     menu .top-menu ul.level_two-menu {
         height: auto;
         padding-left: 0;
-        width: 100%;
+        width: 106%;
         background: #57cbf5;
         margin-top: 1px;
         transition: all .3s ease-in;
