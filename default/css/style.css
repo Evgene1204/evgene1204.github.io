@@ -285,6 +285,45 @@ nav {margin-top: 10px; background-color: #e2761c;}
 	text-align: center;
 }
 
+.header_title_two {
+	margin-top: 60px;
+}
+
+.wrap_content.my_content .content {
+	margin-top: 60px;
+}
+.wrap_content.my_content p {
+	font-size: 20px;
+}
+.wrap_content.my_content .content span {
+    text-transform: uppercase;
+    font-size: 40px;
+    color: #f47601;
+    text-shadow: 2px 1px 5px grey;
+    margin: 10px;
+}
+
+.item_title {
+	float: left;
+	font-size: 30px;
+    width: 35%;
+    color: green;
+}
+
+.item_sh {
+	float: right;
+	width: 65%;
+    text-align: left;
+}
+
+.__item {
+	clear: both;
+	height: 125px
+}
+
+.item_title.cr {
+	color: red;
+}
 /*********************************************   MEDIA   *****************************************/
 
 @media screen and (max-width: 1280px) {
