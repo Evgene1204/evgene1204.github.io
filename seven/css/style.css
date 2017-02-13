@@ -285,7 +285,8 @@ PORTFOLIO
 
 .portfolio-item {
 	position: relative;
-	
+	max-height: 250px;
+	min-height: 250px;
 	overflow: hidden;
 	padding: 0;
 	
