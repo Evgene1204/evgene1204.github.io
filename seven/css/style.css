@@ -597,10 +597,7 @@ footer a{
  .mix{
 	display: none;
 }
-.navbar-nav {
-	background: #fff;
-    border-bottom: 1px solid #e7e7e7;
-}
+
 .checks .service-item .service-icon i.fa {
 	color: green;
 }
@@ -616,6 +613,10 @@ footer a{
 	}
 	section header {
 		padding-top: 20px;
+	}
+	.navbar-nav {
+		background: #fff;
+	    border-bottom: 1px solid #e7e7e7;
 	}
 }
 
