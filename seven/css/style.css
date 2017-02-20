@@ -149,7 +149,7 @@ NAVBAR
 }
 
 .slide{
-	background: url(../img/Shtukaturka-pravilo1.jpg) no-repeat;
+	background: url(../img/291_original.png) no-repeat;
 	background-size: cover;
 	background-position: center;
 	height: 500px;
@@ -327,7 +327,8 @@ figcaption span {
 }
 .logo_my {
 	max-width: 100%;
-    width: 60%
+    width: 60%;
+    float: left;
 }
 
 .box{
@@ -602,7 +603,32 @@ footer a{
 .checks .service-item .service-icon i.fa {
 	color: green;
 }
+
+.navbar-default .navbar-nav > li > a {
+	font-size: 16px;
+}
+.contact {
+	position: absolute;
+    width: 55%;
+    text-align: center;
+    margin-top: 15px
+}
+.contact a {
+	color: #777;
+}
+.slide h1 {
+	font-size: 46px;
+}
+.mrt-30 {
+	margin-top: 30px;
+}
 @media (max-width: 768px) {
+	.contact {
+	    position: absolute;
+	    width: 70%;
+	    text-align: center;
+	    margin-top: 15px;
+	}
 	.logo_my {
 		width: 21%
 	}
@@ -622,6 +648,12 @@ footer a{
 }
 
 @media (max-width: 480px) {
+	.contact {
+	    position: absolute;
+	    width: 120%;
+	    text-align: center;
+	    margin-top: 15px;
+	}
 	.logo_my {
 		width: 39%
 	}

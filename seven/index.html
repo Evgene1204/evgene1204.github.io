@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head>
 	<title>Ремонт и отделка квартир и домов в Бресте под ключ - Expertremont.by</title>
 
@@ -17,8 +17,13 @@
 	<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+	<script>
+		var app = angular.module('app', []);
+	</script>
+	<script type="text/javascript" src="js/mainController.js"></script>
 </head>
-<body>
+<body ng-controller="mainController">
 	<header>
 		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container-fluid">
@@ -31,65 +36,40 @@
 						<span class="icon-bar"></span>
 					</button>
 					<img src="img/logo_header.png" class="logo_my" alt="logo" />
+					<div class="contact">
+						<p><a href="tel:375297214126">+375 29 721 41 26</a></p>
+						<p><a href="tel:375297260926">+375 29 726 09 26</a></p>
+					</div>
 				</div>
 				<div class="collapse navbar-collapse navbar-right" id="navbar-collapse">
 					<ul class="nav navbar-nav">
-						<li><a data-scroll href="index.html#home">Главная</a></li>
-						<li><a data-scroll href="index.html#process">Процесс работы</a></li>
-						<li><a data-scroll href="index.html#images">Галерея</a></li>
-						<li><a data-scroll href="index.html#portfolio">О гипсовой штукатурке</a></li>
-						<li><a data-scroll href="index.html#contact">Контакты</a></li>
+						<li ng-repeat="item in headerMenu"><a data-scroll href="{{item.href}}">{{item.menu}}</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 	</header>
-	<div id="home" class="jumbotron slide slide-fullscreen">
+	<div id="home" class="jumbotron slide slide-fullscreen" >
 		<div class="container">
-			<h1>Высококачественное оштукатуривание</h1>
-			<span>помещений любой сложности машинным способом готовыми гипсовыми штукатурками</span>
+			<h1>ВЫСОКОКАЧЕСТВЕННОЕ ОШТУКАТУРИВАНИЕ ПОМЕЩЕНИЙ ЛЮБОЙ СЛОЖНОСТИ В БРЕСТЕ</h1>
+			<span>Выезд мастера, консультация и составление сметы бесплатно!</span>
 		</div>
 	</div>
 	<!-- Start services section -->
 	<section id="services">
 		<div class="container">
 			<header>
-				<h2 class="wow fadeInDown">Возник вопрос оштукатуривания?</h2>
-				<p class="wow fadeInUp" data-wow-delay="0.1s">
-					Обращайтесь именно к нам!
-				</p>
-				<h2 class="wow fadeInDown">Оштукатуривание машинным способом - это</h2>
+				<h2 class="wow fadeInDown">Оштукатуривание машинным способом</h2>
 				<p class="wow fadeInUp">
 					БЫСТРО! КАЧЕСТВЕННО! ВЫГОДНО!
 				</p>
 			</header>
 			<div class="row">
 				<div class="col-md-4 checks">
-					<div class="service-item text-right wow fadeInUp">
+					<div class="service-item text-right wow fadeInUp" ng-repeat="item in plus">
 						<div class="service-text">
-							<h3>Быстро</h3>
-							<p>За счет механизации процесса и использования готовой смеси, время высыхания 3-7 дней.
-							</p>
-						</div>
-						<div class="service-icon">
-							<i class="fa fa-check"></i>
-						</div>
-					</div>
-					<div class="service-item text-right wow fadeInUp" >
-						<div class="service-text">
-							<h3>Качественно</h3>
-							<p>За счет однородной смеси и легкого материала поверхность идеально ровная и дает меньшую усадку.
-							</p>
-						</div>
-						<div class="service-icon">
-							<i class="fa fa-check"></i>
-						</div>
-					</div>
-					<div class="service-item text-right wow fadeInUp">
-						<div class="service-text">
-							<h3>Выгодно</h3>
-							<p>Затраты на материалы, доставку, разгрузку ниже. Оплата за рабочие процессы и потери материала минимизированы, что сохраняет Ваши деньги.
-							</p>
+							<h3>{{item.title}}</h3>
+							<p>{{item.text}}</p>
 						</div>
 						<div class="service-icon">
 							<i class="fa fa-check"></i>
@@ -100,31 +80,10 @@
 					<img src="img/DSC01176.jpg" alt="machine" class="mw100" />
 				</div>
 				<div class="col-md-4">
-					<div class="service-item text-left wow fadeInUp">
+					<div class="service-item text-left wow fadeInUp" ng-repeat="item in minus">
 						<div class="service-text">
-							<h3>Долго</h3>
-							<p>Подготовка материала дольше (просеивание, перенос, замешивание и т.д.). Время высыхания до 1 месяца.
-							</p>
-						</div>
-						<div class="service-icon">
-							<i class="fa fa-times"></i>
-						</div>
-					</div>
-					<div class="service-item text-left wow fadeInUp">
-						<div class="service-text">
-							<h3>Менее качественно</h3>
-							<p>Дает большую усадку и требует последующего шпаклевания.
-							</p>
-						</div>
-						<div class="service-icon">
-							<i class="fa fa-times"></i>
-						</div>
-					</div>
-					<div class="service-item text-left wow fadeInUp" >
-						<div class="service-text">
-							<h3>Не выгодно</h3>
-							<p>Расходы на материалы, доставку, разгрезку выше. Большие потери материала при работе.
-							</p>
+							<h3>{{item.title}}</h3>
+							<p>{{item.text}}</p>
 						</div>
 						<div class="service-icon">
 							<i class="fa fa-times"></i>
@@ -143,14 +102,18 @@
 				<div class="col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
 					<div class="team-member">
 						<div class="member-photo">
+							<p>КАК ДЕЛАЕМ МЫ! ВСЕГО 2 ЭТАПА</p>
 							<img src="img/ris1.jpg" class="img-responsive" alt="рисунок 1">
+							<p class="mrt-30">Дом в 350 м2 бригада из 3 мастеров оштукатурит в течении 1-2 недель</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
 					<div class="team-member">
 						<div class="member-photo">
+							<p>КАК ДЕЛАЮТ ДРУГИЕ! ОТ 8 ЭТАПОВ</p>
 							<img src="img/ris2.jpg" class="img-responsive" alt="рисунок 1">
+							<p class="mrt-30">Здесь это займет 1-2 месяца. Потребуется 2 бригады!</p>
 						</div>
 					</div>
 				</div>
@@ -159,7 +122,7 @@
 	</section>
 	<div class="video-wrapper clearfix">
 		<div class="col-md-offset-1 col-md-10 video">
-			<a href="https://www.youtube.com/watch?v=8u_k8issTsE" id="popup-youtube" class="circled fa fa-play" ></a>
+			<a href="https://www.youtube.com/watch?v=onuUmOBVxDM" id="popup-youtube" class="circled fa fa-play" ></a>
 			<h3>Узнать больше о машинном оштукатуривании</h3>
 		</div>
 	</div>
@@ -188,50 +151,11 @@
 			</ul>
 		</nav>
 		<div class="projects row">
-			<figure class="mix all example portfolio-item icons col-md-3 col-sm-6" >
-				<img class="img-responsive" src="img/1287160221.jpg" alt="" />
-			</figure>			<figure class="mix all example portfolio-item ui-kits col-md-3  col-sm-6">
-				<img class="img-responsive" src="img/pr31.jpg" alt="" />
-			</figure>
-			<figure class="mix all machine portfolio-item templates col-md-3  col-sm-6">
-				<img class="img-responsive" src="img/pic3.jpg" alt="" />
-			</figure>
-			<figure class="mix all example portfolio-item icons col-md-3  col-sm-6">
-				<img class="img-responsive" src="img/3917542072.jpg" alt="" />
-			</figure>
-			<figure class="mix all machine portfolio-item templates col-md-3  col-sm-6">
-				<img class="img-responsive" src="img/ris4.jpg" alt="" />
-			</figure>
-			<figure class="mix all machine portfolio-item templates col-md-3  col-sm-6">
-				<img class="img-responsive" src="img/DSC01176.jpg" alt="" />
-			</figure>
-			<figure class="mix all example portfolio-item templates col-md-3  col-sm-6">
-				<img class="img-responsive" src="img/gips.jpg" alt="" />
-			</figure>
-			<figure class="mix all machine portfolio-item templates col-md-3  col-sm-6">
-				<img class="img-responsive" src="img/pic2.jpg" alt="" />
+			<figure class="mix all {{img.class}} portfolio-item col-md-3 col-sm-6" ng-repeat="img in gallery">
+				<img class="img-responsive" ng-src="img/{{img.name}}" alt="" />
 			</figure>
 		</div>
 	</div>
-</section>
-<section id="process">
-	<header>
-		<h2 class="wow fadeInDown">Процесс работы</h2>
-		<h2 class="wow fadeInDown">Шаг 1</h2>
-		<p class="wow fadeInUp" data-wow-delay="0.1s">Весь технологический процесс машинного оштукатуривания гипсовым раствором выглядит следующим образом. Штукатурный агрегат устанавливается на объект, подключается к электропитанию 380в и водоснабжению.
-		Сухая смесь из мешка засыпается в бункер агрегата, который смешивает смесь с водой до нужной консистенции и подает по шлангу под давлением.
-		</p>
-		<h2 class="wow fadeInDown">Шаг 2</h2>
-		<p class="wow fadeInUp">Мы устанавливаем по уровневым отметкам специальные маяки из гипса, алюминия или оцинкованного железа.
-		На наружные углы откосов устанавливаем специальные уголки с сетчатыми краями, а на оконные рамы клеятся специальные пластиковые профиля которые служат маяком для оштукатуривания откоса и защищают примыкания  от трещин из-за ветровой нагрузки окна. В углы стен и  на углы окон проклеивается  сетка для предотвращения глубоких трещин по штукатурке.
-		</p>
-		<h2 class="wow fadeInDown">Шаг 3</h2>
-		<p class="wow fadeInUp">После чего гипсовую смесь наносим на стены , потолки либо откосы. С помощью правил раствор на стене выравниваем, снимаем излишнюю массу нанесенного раствора, в места его нехватки — добавляем. Раствор для машинного нанесения разработан специально так, что в процессе обработки на поверхности выделяется масса, по характеристикам похожая на финишную шпаклевку, которая заполняет мелкие поры и неровности, получающиеся в процессе выравнивания раствора. Готовые стены и потолки, сделанные с помощью гипсовой штукатурки, получаются идеально ровные и гладкие, что позволяет клеить обои, стеклохолст и даже окрашивать оштукатуренные таким способом поверхности.
-		</p>
-		<h2 class="wow fadeInDown">Шаг 4</h2>
-		<p class="wow fadeInUp">После производства работ поверхности дают хорошо просохнуть. Время сушки зависит от погодных условий, обычно это одна две недели.
-		</p>
-	</header>
 </section>
 <section id="portfolio">
 	<header>
