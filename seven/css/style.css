@@ -630,6 +630,19 @@ footer a{
     color: black;
     margin-bottom: 80px
 }
+
+p.skills {
+	font-size: 21px;
+}
+
+.example {
+	font-size: 29px;
+}
+p.how_doing {
+	font-size: 25px;
+}
+
+
 @media (max-width: 768px) {
 	.contact {
 	    position: absolute;
