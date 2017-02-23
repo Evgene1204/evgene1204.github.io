@@ -642,6 +642,10 @@ p.how_doing {
 	font-size: 25px;
 }
 
+.member-photo p.how_doing {
+	color: #fa5c58;
+}
+
 
 @media (max-width: 768px) {
 	.contact {
