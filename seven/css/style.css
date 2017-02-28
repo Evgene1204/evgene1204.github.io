@@ -162,6 +162,8 @@ NAVBAR
 .slide .container{
 	margin-top:25%;
 	margin-top:30vh;
+	padding-left: 250px;
+	color: #005fc8;
 }
 
 .slide h1{
@@ -648,6 +650,9 @@ p.how_doing {
 
 
 @media (max-width: 768px) {
+	.slide .container{
+		padding-left: 0;
+	}
 	.contact {
 	    position: absolute;
 	    width: 70%;
