@@ -648,6 +648,10 @@ p.how_doing {
 	color: #fa5c58;
 }
 
+#contact {
+	margin-top: 30px;
+}
+
 
 @media (max-width: 768px) {
 	.slide .container{
