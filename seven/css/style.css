@@ -664,6 +664,9 @@ p.how_doing {
 
 
 @media (max-width: 768px) {
+	.navbar-collapse.navbar-right.collapse {
+	    padding-top: 0px;
+	}
 	.slide .container{
 		padding-left: 0;
 	}
