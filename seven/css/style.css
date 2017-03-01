@@ -106,6 +106,7 @@ NAVBAR
 
 .navbar-default .nav{
 	margin-bottom: 19px;
+	margin-top: 0;
 }
 
 .navbar-default .nav li a{
@@ -687,6 +688,11 @@ p.how_doing {
 }
 
 @media (max-width: 480px) {
+	.contact a {
+	    color: #777;
+	    font-size: 14px;
+	    font-weight: bold;
+	}
 	.contact {
 	    position: absolute;
 	    width: 120%;
