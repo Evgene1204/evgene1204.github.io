@@ -105,7 +105,6 @@ NAVBAR
 }
 
 .navbar-default .nav{
-	margin-top:19px;
 	margin-bottom: 19px;
 }
 
@@ -646,6 +645,12 @@ p.how_doing {
 
 .member-photo p.how_doing {
 	color: #fa5c58;
+}
+
+.navbar-default .navbar-toggle {
+	   position: absolute;
+    right: 0;
+    z-index: 1000
 }
 
 #contact {
