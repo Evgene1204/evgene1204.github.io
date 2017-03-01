@@ -658,6 +658,10 @@ p.how_doing {
 	margin-top: 30px;
 }
 
+.navbar-collapse.navbar-right.collapse {
+	padding-top: 15px;
+}
+
 
 @media (max-width: 768px) {
 	.slide .container{
