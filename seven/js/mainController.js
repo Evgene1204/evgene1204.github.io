@@ -7,6 +7,10 @@ app.controller('mainController', function($scope) {
                         href: 'index.html#home'
                         },
                         {
+                        menu: 'Преимущества',
+                        href: 'index.html#services'
+                        },
+                        {
                         menu: 'Процесс работы',
                         href: 'index.html#economia'
                         },

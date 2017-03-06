@@ -612,7 +612,7 @@ footer a{
 }
 .contact {
 	position: absolute;
-    width: 55%;
+    width: 40%;
     text-align: center;
     margin-top: 15px
 }
@@ -664,6 +664,12 @@ p.how_doing {
 
 
 @media (max-width: 768px) {
+	.footer-contacts {
+		padding-bottom: 20px;
+	}
+	.address {
+		margin-bottom: 20px;
+	}
 	.navbar-collapse.navbar-right.collapse {
 	    padding-top: 0px;
 	}
