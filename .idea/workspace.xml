@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="568b8a10-9df5-43f8-9592-f07e5f7e03ab" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vitrins/index.html" afterPath="$PROJECT_DIR$/vitrins/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vitrins/js/Controllers/VitrinController.js" afterPath="$PROJECT_DIR$/vitrins/js/Controllers/VitrinController.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,11 +13,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vitrins/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="569">
-              <caret line="39" column="55" lean-forward="false" selection-start-line="39" selection-start-column="55" selection-end-line="39" selection-end-column="55" />
+            <state relative-caret-position="611">
+              <caret line="41" column="17" lean-forward="true" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VitrinController.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vitrins/js/Controllers/VitrinController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -32,6 +42,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/vitrins/index.html" />
+        <option value="$PROJECT_DIR$/vitrins/js/Controllers/VitrinController.js" />
       </list>
     </option>
   </component>
@@ -78,6 +89,31 @@
               <item name="evgeniy1204.github.io" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="vitrins" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="evgeniy1204.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="evgeniy1204.github.io" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vitrins" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="evgeniy1204.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="evgeniy1204.github.io" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vitrins" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="evgeniy1204.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="evgeniy1204.github.io" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vitrins" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sandbox" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="evgeniy1204.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="evgeniy1204.github.io" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vitrins" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -112,12 +148,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1510756178104</updated>
-      <workItem from="1510756179287" duration="368000" />
+      <workItem from="1510756179287" duration="418000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="368000" />
+    <option name="totallyTimeSpent" value="418000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -155,8 +191,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/vitrins/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="39" column="55" lean-forward="false" selection-start-line="39" selection-start-column="55" selection-end-line="39" selection-end-column="55" />
+        <state relative-caret-position="611">
+          <caret line="41" column="17" lean-forward="true" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vitrins/js/Controllers/VitrinController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>

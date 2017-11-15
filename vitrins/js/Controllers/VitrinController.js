@@ -3,7 +3,7 @@ vitrinApp.controller('VitrinController', function($scope, $http) {
     $scope.mainSentence = [];
     $scope.otherSentence = [];
 
-    $http.get("/sandbox/main.json")
+    $http.get("/vitrins/sandbox/main.json")
         .then(function(response) {
             var sentences = response.data;
             angular.forEach(sentences, function (value, key) {
@@ -14,7 +14,7 @@ vitrinApp.controller('VitrinController', function($scope, $http) {
             alert("error");
         });
 
-    $http.get("/sandbox/other.json")
+    $http.get("/vitrins/sandbox/other.json")
         .then(function(response) {
             var sentences = response.data;
             angular.forEach(sentences, function (value, key) {
