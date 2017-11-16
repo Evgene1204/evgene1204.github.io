@@ -1,26 +1,22 @@
 vitrinApp.controller('VitrinController', function($scope, $http) {
 
-    $scope.mainSentence = [];
-    $scope.otherSentence = [];
+    $scope.mainSentences = [];
+    $scope.otherSentences = [];
 
-    $http.get("/vitrins/sandbox/main.json")
+    $http.get("/vitrins/sandbox/offers.json")
         .then(function(response) {
-            var sentences = response.data;
-            angular.forEach(sentences, function (value, key) {
-                var itemSentence = angular.fromJson(value);
-                $scope.mainSentence.push(itemSentence);
-            });
-        }, function () {
-            alert("error");
-        });
+            var ResponseMainSentences = response.data.main;
 
-    $http.get("/vitrins/sandbox/other.json")
-        .then(function(response) {
-            var sentences = response.data;
-            angular.forEach(sentences, function (value, key) {
+            angular.forEach(ResponseMainSentences, function (value, key) {
                 var itemSentence = angular.fromJson(value);
-                $scope.otherSentence.push(itemSentence);
+                $scope.mainSentences.push(itemSentence);
             });
+            var ResponseOtherSentences = response.data.others;
+            angular.forEach(ResponseOtherSentences, function (value, key) {
+                var itemSentence = angular.fromJson(value);
+                $scope.otherSentences.push(itemSentence);
+            });
+            $scope.colorTheme = response.data.theme;
         }, function () {
             alert("error");
         });

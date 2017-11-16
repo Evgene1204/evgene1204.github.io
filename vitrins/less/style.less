@@ -4,8 +4,16 @@
 @yellow: #fada61;
 @yellow-light: #fada61;
 
+@green: rgb(71,209,77);
+@orange: rgb(250,90,44);
+
 @color-gray: #747474;
 @color-light-gray: #f4f4f4;
+
+@bir: rgb(113,225,215);
+
+@red: rgb(246,39,49);
+@salat: rgb(115,165,8);
 
 .wrapper {
   max-width: 768px;
@@ -122,6 +130,7 @@
 
   .item-sentence-wrapper.gray {
     background-color: @color-light-gray;
+    border: 1px solid rgb(226,228,230);
     .content-sentence {
       .item-sentence {
         background: #fff;
@@ -169,5 +178,84 @@
   }
   .clr-theme-back-light {
     background: @yellow-light;
+  }
+}
+
+.wrapper.clr-green {
+  .clr-theme {
+    color: @green;
+  }
+  .clr-theme-back {
+    background: @green;
+  }
+  .clr-theme-back-light {
+    background: @green;
+  }
+}
+
+.wrapper.clr-orange {
+  .clr-theme {
+    color: @orange;
+  }
+  .clr-theme-back {
+    background: @orange;
+  }
+  .clr-theme-back-light {
+    background: @orange;
+  }
+}
+
+.wrapper.clr-comb-yellow-and-bir {
+  .clr-theme-comb {
+    color: @bir;
+  }
+
+  .item-sentence-wrapper {
+    .content-sentence {
+      .item-sentence {
+        div {
+          p.clr-theme-comb {
+            color: @bir;
+          }
+        }
+      }
+    }
+  }
+  .clr-theme-comb-back {
+    background: @bir;
+  }
+
+  .clr-theme-comb-back-btn {
+    background: @yellow;
+  }
+}
+
+.wrapper.clr-comb-red-and-salat {
+  .clr-theme-comb {
+    color: @salat;
+  }
+  .sec-top {
+    .clr-theme-comb {
+      color: @red;
+    }
+  }
+
+  .item-sentence-wrapper {
+    .content-sentence {
+      .item-sentence {
+        div {
+          p.clr-theme-comb {
+            color: @salat;
+          }
+        }
+      }
+    }
+  }
+  .clr-theme-comb-back {
+    background: @salat;
+  }
+
+  .clr-theme-comb-back-btn {
+    background: @red;
   }
 }

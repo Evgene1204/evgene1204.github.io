@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="vitrin" ng-cloak>
 <head>
     <title>mega	</title>
     <meta charset="utf-8">
@@ -7,17 +7,17 @@
     <script src="/vitrins/node_modules/angular/angular.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-    <body>
-        <div class="wrapper clr-blue" ng-app="vitrin" ng-cloak>
+    <body ng-controller="VitrinController">
+        <div class="wrapper" ng-class="colorTheme">
             <header>
-                <h1><span class="clr-theme">Posta</span>Bank</h1>
+                <h1><span class="clr-theme clr-theme-comb">Posta</span>Bank</h1>
             </header>
             <section class="sec-top">
-                <p>Вам автоматичски <span class="clr-theme">одобрены</span> следующие предложения</p>
+                <p>Вам автоматичски <span class="clr-theme clr-theme-comb">одобрены</span> следующие предложения</p>
             </section>
 
-            <div class="sentences" ng-controller="VitrinController">
-                <section class="main-sentence clr-theme-back">
+            <div class="sentences">
+                <section class="main-sentence clr-theme-backs">
                     <div main-sentence></div>
                 </section>
                 <section class="other-sentences">
@@ -29,7 +29,7 @@
                     </div>
                 </section>
             </div>
-            <div class="footer clr-theme-back">
+            <div class="footer clr-theme-back clr-theme-comb-back">
                 <p class="static-footer">
                     Общество с ограниченной ответственностью «Лайф-медиа», 443083, Самарская обл., Самара г, ул. Безымянный 1-й пер, д. 9, офис 150, ОГРН 1146318003589, ИНН 6318242161, КПП 631801001, Свидетельство о регистрации ЦБ РФ № 5077746931928 от 12.03.2015 года.
                 </p>
