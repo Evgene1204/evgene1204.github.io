@@ -1,37 +1,42 @@
-<div class="item-sentence-wrapper gray" ng-repeat="value in otherSentences">
-    <div class="logo-sentence">
-        <img src="{{value.logoUrl}}" alt="logo">
+<div class="item-block" ng-repeat="value in otherSentences">
+    <div class="item-sentence-wrapper gray" ng-if="false == value.isAdv">
+        <div class="logo-sentence">
+            <img src="{{value.data.logoUrl}}" alt="logo">
+        </div>
+        <div class="slogan-sentence">
+            <p>{{value.data.slogan}}</p>
+        </div>
+        <div class="content-sentence">
+            <div class="item-sentence">
+                <div>
+                    <p class="item-title clr-theme-comb">Сумма</p>
+                    <p class="item-text">{{value.data.zaimSumm}}</p>
+                </div>
+            </div>
+            <div class="item-sentence">
+                <div>
+                    <p class="item-title clr-theme-comb">Срок</p>
+                    <p class="item-text">{{value.data.zaimSrok}} <span>{{value.data.zaimType}}</span></p>
+                </div>
+            </div>
+            <div class="item-sentence">
+                <div>
+                    <p class="item-title clr-theme-comb">Процент</p>
+                    <p class="item-text">{{value.data.proc}} <span>{{value.data.procType}}</span></p>
+                </div>
+            </div>
+            <div class="item-sentence">
+                <div>
+                    <p class="item-title clr-theme-comb">Возраст</p>
+                    <p class="item-text">{{value.data.minMaxAge}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-sentence">
+            <a href="{{value.data.refUrl}}"><button class="btn-sentence clr-theme-back-light clr-theme-comb-back-btn">Оформить</button></a>
+        </div>
     </div>
-    <div class="slogan-sentence">
-        <p>{{value.slogan}}</p>
-    </div>
-    <div class="content-sentence">
-        <div class="item-sentence">
-            <div>
-                <p class="item-title clr-theme-comb">Сумма</p>
-                <p class="item-text">{{value.zaimSumm}}</p>
-            </div>
-        </div>
-        <div class="item-sentence">
-            <div>
-                <p class="item-title clr-theme-comb">Срок</p>
-                <p class="item-text">{{value.zaimSrok}} <span>{{value.zaimType}}</span></p>
-            </div>
-        </div>
-        <div class="item-sentence">
-            <div>
-                <p class="item-title clr-theme-comb">Процент</p>
-                <p class="item-text">{{value.proc}} <span>{{value.procType}}</span></p>
-            </div>
-        </div>
-        <div class="item-sentence">
-            <div>
-                <p class="item-title clr-theme-comb">Возраст</p>
-                <p class="item-text">{{value.minMaxAge}}</p>
-            </div>
-        </div>
-    </div>
-    <div class="footer-sentence">
-        <a href="{{value.refUrl}}"><button class="btn-sentence clr-theme-back-light clr-theme-comb-back-btn">Оформить</button></a>
+    <div class="advertising-wrapper" ng-if="true == value.isAdv">
+        {{value.data}}
     </div>
 </div>

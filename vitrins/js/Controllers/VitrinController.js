@@ -8,12 +8,25 @@ vitrinApp.controller('VitrinController', function($scope, $http) {
             var ResponseMainSentences = response.data.main;
 
             angular.forEach(ResponseMainSentences, function (value, key) {
-                var itemSentence = angular.fromJson(value);
-                $scope.mainSentences.push(itemSentence);
+                if (!value.isAdv) {
+                    var itemSentence = angular.fromJson(value.data);
+                    $scope.mainSentences.push(itemSentence);
+                    $scope.advertising = "";
+                }
             });
+
             var ResponseOtherSentences = response.data.others;
+
             angular.forEach(ResponseOtherSentences, function (value, key) {
-                var itemSentence = angular.fromJson(value);
+                var itemSentence = {
+                    isAdv: value.isAdv
+                };
+                if (!value.isAdv) {
+                    itemSentence.data = angular.fromJson(value.data);
+                } else {
+                    itemSentence.data = value.data;
+                }
+
                 $scope.otherSentences.push(itemSentence);
             });
             $scope.colorTheme = response.data.theme;
