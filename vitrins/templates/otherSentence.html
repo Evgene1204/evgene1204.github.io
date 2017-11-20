@@ -1,7 +1,7 @@
 <div class="item-block" ng-repeat="value in otherSentences">
     <div class="item-sentence-wrapper gray" ng-if="false == value.isAdv">
         <div class="logo-sentence">
-            <img src="{{value.data.logoUrl}}" alt="logo">
+            <img src="{{value.data.logo_url}}" alt="logo">
         </div>
         <div class="slogan-sentence">
             <p>{{value.data.slogan}}</p>
@@ -10,30 +10,30 @@
             <div class="item-sentence">
                 <div>
                     <p class="item-title clr-theme-comb">Сумма</p>
-                    <p class="item-text">{{value.data.zaimSumm}}</p>
+                    <p class="item-text">{{value.data.zaim_summ}}</p>
                 </div>
             </div>
             <div class="item-sentence">
                 <div>
                     <p class="item-title clr-theme-comb">Срок</p>
-                    <p class="item-text">{{value.data.zaimSrok}} <span>{{value.data.zaimType}}</span></p>
+                    <p class="item-text">{{value.data.zaim_srok}}</p>
                 </div>
             </div>
             <div class="item-sentence">
                 <div>
                     <p class="item-title clr-theme-comb">Процент</p>
-                    <p class="item-text">{{value.data.proc}} <span>{{value.data.procType}}</span></p>
+                    <p class="item-text">{{value.data.proc}}</span></p>
                 </div>
             </div>
             <div class="item-sentence">
                 <div>
                     <p class="item-title clr-theme-comb">Возраст</p>
-                    <p class="item-text">{{value.data.minMaxAge}}</p>
+                    <p class="item-text">{{value.data.min_max_age}}</p>
                 </div>
             </div>
         </div>
         <div class="footer-sentence">
-            <a href="{{value.data.refUrl}}"><button class="btn-sentence clr-theme-back-light clr-theme-comb-back-btn">Оформить</button></a>
+            <a href="{{value.data.ref_url}}"><button class="btn-sentence clr-theme-back-light clr-theme-comb-back-btn">Оформить</button></a>
         </div>
     </div>
     <div class="advertising-wrapper" ng-if="true == value.isAdv">

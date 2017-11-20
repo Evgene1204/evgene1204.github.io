@@ -1,6 +1,6 @@
 <div class="item-sentence-wrapper" ng-repeat="value in mainSentences">
     <div class="logo-sentence">
-        <img src="{{value.logoUrl}}" alt="logo">
+        <img src="{{value.logo_url}}" alt="logo">
     </div>
     <div class="slogan-sentence">
         <p>{{value.slogan}}</p>
@@ -9,29 +9,29 @@
         <div class="item-sentence">
             <div>
                 <p class="item-title clr-theme-comb">Сумма</p>
-                <p class="item-text">{{value.zaimSumm}}</p>
+                <p class="item-text">{{value.zaim_summ}}</p>
             </div>
         </div>
         <div class="item-sentence">
             <div>
                 <p class="item-title clr-theme-comb">Срок</p>
-                <p class="item-text">{{value.zaimSrok}} <span>{{value.zaimType}}</span></p>
+                <p class="item-text">{{value.zaim_srok}} <span>{{value.zaim_type}}</span></p>
             </div>
         </div>
         <div class="item-sentence">
             <div>
                 <p class="item-title clr-theme-comb">Процент</p>
-                <p class="item-text">{{value.proc}} <span>{{value.procType}}</span></p>
+                <p class="item-text">{{value.proc}} <span>{{value.proc_yype}}</span></p>
             </div>
         </div>
         <div class="item-sentence">
             <div>
                 <p class="item-title clr-theme-comb">Возраст</p>
-                <p class="item-text">{{value.minMaxAge}}</p>
+                <p class="item-text">{{value.min_max_age}}</p>
             </div>
         </div>
     </div>
     <div class="footer-sentence">
-        <a href="{{value.refUrl}}"><button class="btn-sentence clr-theme-back clr-theme-comb-back-btn">Оформить</button></a>
+        <a href="{{value.ref_url}}"><button class="btn-sentence clr-theme-back clr-theme-comb-back-btn">Оформить</button></a>
     </div>
 </div>

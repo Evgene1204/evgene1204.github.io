@@ -3,8 +3,9 @@ vitrinApp.controller('VitrinController', function($scope, $http) {
     $scope.mainSentences = [];
     $scope.otherSentences = [];
 
-    $http.get("http://sms-tracker.int/dev.php/offer/getOffers")
+    $http.get("http://f28fa15c.ngrok.io/dev.php/api/offer/vitrine/offers")
         .then(function(response) {
+            console.log(response);
             var ResponseOtherSentences = response.data.offers
             angular.forEach(ResponseOtherSentences, function (value, key) {
                 var response = angular.fromJson(value);
