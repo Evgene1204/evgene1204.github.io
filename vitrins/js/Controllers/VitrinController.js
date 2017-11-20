@@ -3,28 +3,22 @@ vitrinApp.controller('VitrinController', function($scope, $http) {
     $scope.mainSentences = [];
     $scope.otherSentences = [];
 
-    $http.get("/vitrins/sandbox/offers.json")
+    $http.get("http://sms-tracker.int/dev.php/offer/getOffers")
         .then(function(response) {
-            var ResponseMainSentences = response.data.main;
-
-            angular.forEach(ResponseMainSentences, function (value, key) {
-                if (!value.isAdv) {
-                    var itemSentence = angular.fromJson(value.data);
-                    $scope.mainSentences.push(itemSentence);
-                    $scope.advertising = "";
-                }
-            });
-
-            var ResponseOtherSentences = response.data.others;
-
+            var ResponseOtherSentences = response.data.offers
             angular.forEach(ResponseOtherSentences, function (value, key) {
+                var response = angular.fromJson(value);
+                if (!key) {
+                    $scope.mainSentences.push(response);
+                    return;
+                }
                 var itemSentence = {
-                    isAdv: value.isAdv
+                    isAdv: response.is_adv
                 };
-                if (!value.isAdv) {
-                    itemSentence.data = angular.fromJson(value.data);
+                if (!response.is_adv) {
+                    itemSentence.data = response
                 } else {
-                    itemSentence.data = value.data;
+                    itemSentence.data = response.script;
                 }
 
                 $scope.otherSentences.push(itemSentence);
