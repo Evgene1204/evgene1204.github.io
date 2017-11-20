@@ -3,7 +3,7 @@ vitrinApp.controller('VitrinController', function($scope, $http) {
     $scope.mainSentences = [];
     $scope.otherSentences = [];
 
-    $http.get("http://f28fa15c.ngrok.io/dev.php/api/offer/vitrine/offers")
+    $http.get("https://f28fa15c.ngrok.io/dev.php/api/offer/vitrine/offers")
         .then(function(response) {
             console.log(response);
             var ResponseOtherSentences = response.data.offers
