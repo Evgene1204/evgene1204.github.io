@@ -1,11 +1,10 @@
-vitrinApp.controller('VitrinController', function($scope, $http) {
+vitrinApp.controller('VitrineController', function($scope, $http, $rootScope) {
 
     $scope.mainSentences = [];
     $scope.otherSentences = [];
 
     $http.get("https://f28fa15c.ngrok.io/dev.php/api/offer/vitrine/offers")
         .then(function(response) {
-            console.log(response);
             var ResponseOtherSentences = response.data.offers
             angular.forEach(ResponseOtherSentences, function (value, key) {
                 var response = angular.fromJson(value);

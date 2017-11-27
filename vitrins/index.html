@@ -7,7 +7,7 @@
     <script src="/vitrins/node_modules/angular/angular.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-    <body ng-controller="VitrinController">
+    <body ng-controller="VitrineController">
         <div class="wrapper" ng-class="colorTheme">
             <header>
                 <h1><span class="clr-theme clr-theme-comb">Posta</span>Bank</h1>
@@ -38,9 +38,10 @@
         <script>
             var vitrinApp = angular.module('vitrin',[]).run(function($rootScope) {
                 $rootScope.baseTemplateUrl = '/vitrins/templates/';
+                $rootScope.host = "http://trck-sms.ru/";
             });
         </script>
-        <script src="/vitrins/js/Controllers/VitrinController.js"></script>
+        <script src="/vitrins/js/Controllers/VitrineController.js"></script>
         <script src="/vitrins/js/Directives/mainSentences.js"></script>
         <script src="/vitrins/js/Directives/otherSentences.js"></script>
     </body>
