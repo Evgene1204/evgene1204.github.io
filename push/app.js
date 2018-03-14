@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const applicationServerKey = "BCmti7ScwxxVAlB7WAyxoOXtV7J8vVCXwEDIFXjKvD-ma-yJx_eHJLdADyyzzTKRGb395bSAtxlh4wuDycO3Ih4";
     const siteName = "Test";
-    const subscribeUrl = "https://push.cfv4.com/dev.php/subscription";
+    const subscribeUrl = "https://push.cfv4.com/subscription";
 
     let isPushEnabled = false;
 
