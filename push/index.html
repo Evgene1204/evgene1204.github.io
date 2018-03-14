@@ -1,9 +1,21 @@
 <html>
+<head>
+	<link rel="manifest" href="/manifest.json" />
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "222d901e-e620-4459-8634-360272da3ac2",
+    });
+  });
+</script>
+</head>
 <body>
     <h1>Web Push talk @PWA Paris #2</h1>
     <button id="push-subscription-button">Push notifications !</button>
     <input type="hidden" id="site-name" name="site-namee" value="hide site-name">
     <input type="hidden" id="title-push" name="title-push" value="hide title push">
-    <script type="text/javascript" src="https://push.cfv4.com/bundles/app/js/app.js"></script>
+    
 </body>
 </html>
