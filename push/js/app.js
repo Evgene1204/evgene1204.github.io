@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    navigator.serviceWorker.register("serviceWorker.js")
+    navigator.serviceWorker.register("js/serviceWorker.js")
     .then(() => {
         console.log('[SW] Service worker has been registered');
         push_updateSubscription();
