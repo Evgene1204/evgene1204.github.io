@@ -1,0 +1,21 @@
+.content-album .content-header {
+  margin-bottom: 40px;
+}
+.content-album .content-header .header-photo {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+}
+.content-album .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.content-album .content .item {
+  width: 70%;
+}
+.content-album .content .item img {
+  max-width: 100%;
+}
+/*# sourceMappingURL=album.css.map */

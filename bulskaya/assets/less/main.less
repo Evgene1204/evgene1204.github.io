@@ -1,0 +1,35 @@
+@import 'header.less';
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+}
+
+.my-icon {
+  line-height: inherit;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.slider_content {
+  .main_slider {
+    .item {
+      width: 100%;
+      height: calc(100vh - 200px);
+      background-size: cover;
+    }
+  }
+}
+
+.wrapper {
+  height: 100vh;
+}
+
+@import 'album';
+@import 'portfolio';
+@import 'footer';

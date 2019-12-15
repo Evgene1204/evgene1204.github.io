@@ -1,0 +1,265 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-shadow: 0px -8px 8px 4px;
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  z-index: 1000;
+}
+header .logo {
+  color: #D5B45B;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5em;
+  padding: 10px 0;
+}
+header .logo a {
+  text-decoration: none;
+  color: inherit;
+}
+header .menu {
+  display: flex;
+  width: 70%;
+}
+header .menu nav {
+  display: table;
+  margin: 0 auto;
+}
+header .menu nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+header .menu nav ul a,
+header .menu nav ul span {
+  text-decoration: none;
+  outline: none;
+  display: block;
+  transition: 0.3s ease-in-out;
+}
+header .menu nav ul.top_menu {
+  display: flex;
+  justify-content: space-between;
+}
+header .menu nav ul.top_menu:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+header .menu nav ul.top_menu > li {
+  width: 36%;
+  float: left;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+}
+header .menu nav ul.top_menu > li .submenu {
+  background: #273037;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 5;
+  width: 180px;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  transition: 0.5s ease-in-out;
+}
+header .menu nav ul.top_menu > li .submenu a,
+header .menu nav ul.top_menu > li .submenu span {
+  color: white;
+  text-align: left;
+  padding: 12px 15px;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+header .menu nav ul.top_menu > li .submenu li:last-child a {
+  border-bottom: none;
+}
+header .menu nav ul.top_menu > li > a,
+header .menu nav ul.top_menu > li > span {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  color: #404040;
+  padding: 15px 20px;
+}
+header .menu nav ul.top_menu > li span.submenu-link:after {
+  content: "\f107";
+  font-family: "FontAwesome";
+  color: inherit;
+  margin-left: 10px;
+}
+header .menu nav ul.top_menu > li:hover .submenu {
+  opacity: 1;
+  transform: scaleY(1);
+}
+header .menu nav ul.top_menu li a:hover,
+header .menu nav ul.top_menu li span:hover {
+  color: #D5B45B;
+  cursor: pointer;
+}
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/quicksand/v19/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkKEo58a-xw.ttf) format('truetype');
+}
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+}
+.my-icon {
+  line-height: inherit;
+}
+.text-center {
+  text-align: center;
+}
+.slider_content .main_slider .item {
+  width: 100%;
+  height: calc(100vh - 200px);
+  background-size: cover;
+}
+.wrapper {
+  height: 100vh;
+}
+.content-album .content-header {
+  margin-bottom: 40px;
+  position: relative;
+}
+.content-album .content-header .header-photo {
+  width: 100%;
+  height: calc(100vh - 250px);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.content-album .content-header .header-description {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 10px 20px;
+  background: rgba(64, 64, 64, 0.45);
+  width: 100%;
+  text-align: right;
+  color: #fff;
+}
+.content-album .content-header .header-description p {
+  margin: 0;
+  font-weight: 400;
+}
+.content-album .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.content-album .content .item {
+  width: 50%;
+  margin: 15px 0;
+  text-align: center;
+}
+.content-album .content .item img {
+  max-width: 100%;
+}
+.content-album .content .item .item-description {
+  margin-top: 0;
+}
+.content-album .content .description {
+  width: 45%;
+  text-align: center;
+}
+.content-album .content .description .description-header {
+  font-size: 30px;
+}
+.content-album .content .description .description-small {
+  font-size: 17px;
+}
+.content-wrapper .grid .block-item {
+  width: 300px;
+  background-size: cover;
+}
+.content-wrapper .grid .block-item img {
+  width: 80%;
+}
+footer {
+  margin: 20px 0;
+}
+footer .footer_contacts .social_links {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+footer .footer_contacts .social_links ul {
+  list-style: none;
+  padding-left: 0;
+}
+footer .footer_contacts .social_links ul li {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  margin: 0 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid #D8E2DC;
+  float: left;
+  transition: all 0.5s ease;
+}
+footer .footer_contacts .social_links ul li .fa,
+footer .footer_contacts .social_links ul li .my-icon {
+  color: #D8E2DC;
+  margin-top: 7px;
+  transition: all 0.5s ease;
+}
+footer .footer_contacts .social_links ul li:hover.instagram {
+  border: 3px solid #bc2a59;
+  box-shadow: 0 0 15px #bc2a59;
+  transition: all 0.5s ease;
+}
+footer .footer_contacts .social_links ul li:hover.instagram .fa-instagram {
+  color: #bc2a59;
+  transition: all 0.5s ease;
+}
+footer .footer_contacts .social_links ul li:hover.whatsapp {
+  border: 3px solid #4dc247;
+  box-shadow: 0 0 15px #4dc247;
+  transition: all 0.5s ease;
+}
+footer .footer_contacts .social_links ul li:hover.whatsapp .fa-whatsapp {
+  color: #4dc247;
+  transition: all 0.5s ease;
+}
+footer .footer_contacts .social_links ul li:hover.vk {
+  border: 3px solid #4a76a8;
+  box-shadow: 0 0 15px #4a76a8;
+  transition: all 0.5s ease;
+}
+footer .footer_contacts .social_links ul li:hover.vk .fa-vk {
+  color: #4a76a8;
+  transition: all 0.5s ease;
+}
+footer .footer_contacts .social_links ul li:hover.viber {
+  border: 3px solid #8e24aa;
+  box-shadow: 0 0 15px #8e24aa;
+  transition: all 0.5s ease;
+}
+footer .footer_contacts .social_links ul li:hover.viber .icon-viber {
+  color: #8e24aa;
+  transition: all 0.5s ease;
+}
+footer .footer_contacts .mail {
+  margin-top: 0;
+}
+footer .footer_contacts .mail a {
+  text-decoration: none;
+  color: black;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+footer .footer_contacts .mail a:hover {
+  color: #D5B45B;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,117 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-shadow: 0px -8px 8px 4px;
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  z-index: 1000;
+
+  .logo {
+    color: #D5B45B;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    padding: 10px 0;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  .menu {
+    display: flex;
+    width: 70%;
+
+    nav {
+      display: table;
+      margin: 0 auto;
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        a, span {
+          text-decoration: none;
+          outline: none;
+          display: block;
+          transition: .3s ease-in-out;
+        }
+
+        &.top_menu {
+          display: flex;
+          justify-content: space-between;
+
+          &:after {
+            content: "";
+            display: table;
+            clear: both;
+          }
+
+          & > li {
+            width: 36%;
+            float: left;
+            position: relative;
+            font-family: 'Open Sans', sans-serif;
+
+            .submenu {
+              background: #273037;
+              position: absolute;
+              left: 0;
+              top: 100%;
+              z-index: 5;
+              width: 180px;
+              opacity: 0;
+              transform: scaleY(0);
+              transform-origin: 0 0;
+              transition: .5s ease-in-out;
+
+              a, span {
+                color: white;
+                text-align: left;
+                padding: 12px 15px;
+                font-size: 13px;
+                border-bottom: 1px solid rgba(255,255,255,.1);
+              }
+
+              li:last-child {
+                a { border-bottom: none; }
+              }
+            }
+
+            & > a, & > span {
+              text-transform: uppercase;
+              font-size: 14px;
+              font-weight: bold;
+              color: #404040;
+              padding: 15px 20px;
+            }
+
+            span.submenu-link:after {
+              content: "\f107";
+              font-family: "FontAwesome";
+              color: inherit;
+              margin-left: 10px;
+            }
+          }
+
+          & > li:hover {
+            .submenu {
+              opacity: 1;
+              transform: scaleY(1);
+            }
+          }
+
+          li {
+            a:hover, span:hover {
+              color: #D5B45B;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}

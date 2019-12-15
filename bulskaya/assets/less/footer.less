@@ -1,0 +1,97 @@
+footer {
+  margin: 20px 0;
+
+  .footer_contacts {
+    .social_links {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+          width: 45px;
+          height: 45px;
+          line-height: 45px;
+          margin: 0 10px;
+          text-align: center;
+          cursor: pointer;
+          border-radius: 50%;
+          border: 3px solid #D8E2DC;
+          float: left;
+          transition: all 0.5s ease;
+
+          .fa, .my-icon {
+            color: #D8E2DC;
+            margin-top: 7px;
+            transition: all 0.5s ease;
+          }
+
+          &:hover {
+            &.instagram {
+              border: 3px solid #bc2a59;
+              box-shadow: 0 0 15px #bc2a59;
+              transition: all 0.5s ease;
+
+              .fa-instagram {
+                color: #bc2a59;
+                transition: all 0.5s ease;
+              }
+            }
+
+            &.whatsapp {
+              border: 3px solid #4dc247;
+              box-shadow: 0 0 15px #4dc247;
+              transition: all 0.5s ease;
+
+              .fa-whatsapp {
+                color: #4dc247;
+                transition: all 0.5s ease;
+              }
+            }
+
+            &.vk {
+              border: 3px solid #4a76a8;
+              box-shadow: 0 0 15px #4a76a8;
+              transition: all 0.5s ease;
+
+              .fa-vk {
+                color: #4a76a8;
+                transition: all 0.5s ease;
+              }
+            }
+
+            &.viber {
+              border: 3px solid #8e24aa;
+              box-shadow: 0 0 15px #8e24aa;
+              transition: all 0.5s ease;
+
+              .icon-viber {
+                color: #8e24aa;
+                transition: all 0.5s ease;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .mail {
+      margin-top: 0;
+
+      a {
+        text-decoration: none;
+        color: black;
+        outline: none;
+        transition: .3s ease-in-out;
+
+        &:hover {
+          color: #D5B45B
+        }
+      }
+    }
+  }
+}
