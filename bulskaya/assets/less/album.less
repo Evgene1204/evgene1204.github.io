@@ -1,6 +1,5 @@
 .content-album {
   .content-header {
-    margin-bottom: 40px;
     position: relative;
 
     .header-photo {
@@ -37,6 +36,14 @@
       width: 50%;
       margin: 15px 0;
       text-align: center;
+      transform: translateY(50px);
+      transition: all .6s ease-in-out;
+      opacity: 0;
+
+      &.visible {
+        opacity: 1;
+        transform: translate(0);
+      }
 
       img {
         max-width: 100%;

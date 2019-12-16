@@ -59,13 +59,14 @@
         <div class="footer_contacts">
             <div class="social_links">
                 <ul>
-                    <li class="instagram"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></li>
-                    <li class="whatsapp"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></li>
-                    <li class="vk"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></li>
-                    <li class="viber"><i class="my-icon icon-viber fa-2x" aria-hidden="true"></i></li>
+                    <li class="instagram"><a href=""><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>
+                    <li class="whatsapp"><a href=""><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a></li>
+                    <li class="vk"><a href=""><i class="fa fa-vk fa-2x" aria-hidden="true"></i></a></li>
+                    <li class="viber"><a href=""><i class="my-icon icon-viber fa-2x" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
             <p class="mail text-center"><a href="mailto:darya.bulskaya@gmail.com"><i class="fa fa-envelope"></i> darya.bulskaya@gmail.com</a></p>
+            <p class="telephone text-center"><a href="tel:+375298268975"><i class="fa fa-phone"></i> +375 29 826 8975</a></p>
         </div>
     </footer>
 </div>
@@ -75,6 +76,16 @@
         itemSelector: '.block-item',
         columnWidth: 300
     });
+
+    var items = $('.item');
+
+    $(window).scroll(function () {
+        for (var i = 0; i < items.length; i++) {
+            if ((window.pageYOffset + 700) > $(items[i]).offset().top) {
+                $(items[i]).addClass('visible');
+            }
+        }
+    })
 </script>
 </body>
 </html>

@@ -126,7 +126,6 @@ body {
   height: 100vh;
 }
 .content-album .content-header {
-  margin-bottom: 40px;
   position: relative;
 }
 .content-album .content-header .header-photo {
@@ -159,6 +158,13 @@ body {
   width: 50%;
   margin: 15px 0;
   text-align: center;
+  transform: translateY(50px);
+  transition: all 0.6s ease-in-out;
+  opacity: 0;
+}
+.content-album .content .item.visible {
+  opacity: 1;
+  transform: translate(0);
 }
 .content-album .content .item img {
   max-width: 100%;
@@ -176,12 +182,11 @@ body {
 .content-album .content .description .description-small {
   font-size: 17px;
 }
-.content-wrapper .grid .block-item {
-  width: 300px;
-  background-size: cover;
+.content-portfolio .grid .block-item {
+  width: 30%;
 }
-.content-wrapper .grid .block-item img {
-  width: 80%;
+.content-portfolio .grid .block-item img {
+  max-width: 100%;
 }
 footer {
   margin: 20px 0;
@@ -207,6 +212,9 @@ footer .footer_contacts .social_links ul li {
   border: 3px solid #D8E2DC;
   float: left;
   transition: all 0.5s ease;
+}
+footer .footer_contacts .social_links ul li a {
+  text-decoration: none;
 }
 footer .footer_contacts .social_links ul li .fa,
 footer .footer_contacts .social_links ul li .my-icon {
@@ -250,16 +258,19 @@ footer .footer_contacts .social_links ul li:hover.viber .icon-viber {
   color: #8e24aa;
   transition: all 0.5s ease;
 }
-footer .footer_contacts .mail {
+footer .footer_contacts .mail,
+footer .footer_contacts .telephone {
   margin-top: 0;
 }
-footer .footer_contacts .mail a {
+footer .footer_contacts .mail a,
+footer .footer_contacts .telephone a {
   text-decoration: none;
   color: black;
   outline: none;
   transition: 0.3s ease-in-out;
 }
-footer .footer_contacts .mail a:hover {
+footer .footer_contacts .mail a:hover,
+footer .footer_contacts .telephone a:hover {
   color: #D5B45B;
 }
 /*# sourceMappingURL=main.css.map */
