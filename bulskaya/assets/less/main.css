@@ -48,7 +48,6 @@ header .menu nav ul.top_menu:after {
   clear: both;
 }
 header .menu nav ul.top_menu > li {
-  width: 36%;
   float: left;
   position: relative;
   font-family: 'Open Sans', sans-serif;
@@ -80,7 +79,7 @@ header .menu nav ul.top_menu > li > a,
 header .menu nav ul.top_menu > li > span {
   text-transform: uppercase;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: normal;
   color: #404040;
   padding: 15px 20px;
 }
@@ -121,6 +120,7 @@ body {
   width: 100%;
   height: calc(100vh - 200px);
   background-size: cover;
+  background-position: 100%;
 }
 .wrapper {
   height: 100vh;
@@ -160,10 +160,8 @@ body {
   text-align: center;
   transform: translateY(50px);
   transition: all 0.6s ease-in-out;
-  opacity: 0;
 }
 .content-album .content .item.visible {
-  opacity: 1;
   transform: translate(0);
 }
 .content-album .content .item img {
@@ -181,12 +179,6 @@ body {
 }
 .content-album .content .description .description-small {
   font-size: 17px;
-}
-.content-portfolio .grid .block-item {
-  width: 30%;
-}
-.content-portfolio .grid .block-item img {
-  max-width: 100%;
 }
 footer {
   margin: 20px 0;

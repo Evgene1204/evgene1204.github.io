@@ -8,8 +8,9 @@
     <script src="assets/js/lib/masonry.min.js"></script>
     <link rel="stylesheet" href="assets/fonts/icomoon/style.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/lib/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/lib/owl.carousel/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/less/main.css">
+    <script src="assets/js/lib/onScreen/index.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -71,21 +72,15 @@
     </footer>
 </div>
 <script>
-    $('.grid').masonry({
-        // options
-        itemSelector: '.block-item',
-        columnWidth: 300
-    });
-
     var items = $('.item');
 
     $(window).scroll(function () {
         for (var i = 0; i < items.length; i++) {
-            if ((window.pageYOffset + 700) > $(items[i]).offset().top) {
+            if ((window.pageYOffset + 800) > $(items[i]).offset().top) {
                 $(items[i]).addClass('visible');
             }
         }
-    })
+    });
 </script>
 </body>
 </html>
