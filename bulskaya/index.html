@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/fonts/icomoon/style.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/lib/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/lib/owl.carousel/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/less/main.css">
 </head>
 <body>
 <div class="wrapper">
     <header>
-        <div class="logo"><a href="index.html">Daria Bulskaya</a><a href="#">+375 29 826 8975</a></div>
+        <div class="logo"><a href="index.html">Daria Bulskaya</a></div>
         <div class="menu">
             <nav>
                 <ul class="top_menu">
@@ -25,20 +25,21 @@
                             <li><a href="">Альбомы</a></li>
                         </ul>
                     </li>
-                    <li><a href="">Истории</a></li>
+                    <li><a href="story.html">Истории</a></li>
                     <li><a href="">Контакты</a></li>
+                    <li><a href="tel:+375298268975">+375 29 826 8975</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <div class="content-wrapper">
+    <div class="content-all content-wrapper">
         <div class="slider_content">
             <div class="main_slider owl-carousel owl-theme">
-                <div class="item" style="background-image: url(assets/images/13707.jpg)">
+                <div class="item" style="background-image: url(assets/images/14807.jpg)">
                 </div>
-                <div class="item" style="background-image: url(assets/images/13724.jpg)">
+                <div class="item" style="background-image: url(assets/images/14636.jpg)">
                 </div>
-                <div class="item" style="background-image: url(assets/images/13732.jpg)">
+                <div class="item" style="background-image: url(assets/images/14558.jpg)">
                 </div>
             </div>
         </div>
@@ -47,13 +48,14 @@
         <div class="footer_contacts">
             <div class="social_links">
                 <ul>
-                    <li class="instagram"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></li>
-                    <li class="whatsapp"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></li>
-                    <li class="vk"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></li>
-                    <li class="viber"><i class="my-icon icon-viber fa-2x" aria-hidden="true"></i></li>
+                    <li class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                    <li class="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
+                    <li class="vk"><i class="fa fa-vk" aria-hidden="true"></i></li>
+                    <li class="viber"><i class="my-icon icon-viber" aria-hidden="true"></i></li>
                 </ul>
             </div>
             <p class="mail text-center"><a href="mailto:darya.bulskaya@gmail.com"><i class="fa fa-envelope"></i> darya.bulskaya@gmail.com</a></p>
+            <p class="telephone text-center"><a href="tel:+375298268975"><i class="fa fa-phone"></i> +375 29 826 8975</a></p>
         </div>
     </footer>
 </div>
@@ -62,18 +64,15 @@
     $(document).ready(function() {
         $('.main_slider').owlCarousel({
             loop:true,
+            center: true,
+            items:2,
             autoplay: true,
-            nav: false,
-            dots: false,
+            smartSpeed: 1400,
+            nav: true,
+            navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
             responsive:{
-                0:{
-                    items:1
-                },
                 600:{
-                    items:1
-                },
-                1000:{
-                    items:1
+                    items:2
                 }
             }
         })
