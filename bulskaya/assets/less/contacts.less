@@ -1,0 +1,50 @@
+.wrapper {
+  .content-all {
+    &.content-contacts {
+      padding-top: 67px;
+
+      .contacts {
+        display: flex;
+
+        .left-side {
+          width: 50%;
+
+          .contact-photo {
+            img {
+              max-width: 100%;
+            }
+          }
+        }
+
+        .right-side {
+          width: 50%;
+
+          .contacts-info {
+            margin: 20px;
+
+            a {
+              text-decoration: none;
+              outline: none;
+              color: #404040;
+              transition: all .5s ease;
+
+              &:hover {
+                color: #D5B45B;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .contacts-footer {
+      text-align: center;
+
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+}

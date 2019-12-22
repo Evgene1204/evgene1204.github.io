@@ -1,0 +1,10 @@
+.wrapper .content-all.content-contacts {
+  padding-top: 67px;
+}
+.wrapper .content-all.content-contacts .left-side {
+  width: 50%;
+}
+.wrapper .content-all.content-contacts .left-side .contact-photo img {
+  max-width: 100%;
+}
+/*# sourceMappingURL=contacts.css.map */

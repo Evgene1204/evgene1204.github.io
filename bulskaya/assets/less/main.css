@@ -227,6 +227,39 @@ body {
 .content-album .content .description .description-small {
   font-size: 17px;
 }
+.wrapper .content-all.content-contacts {
+  padding-top: 67px;
+}
+.wrapper .content-all.content-contacts .contacts {
+  display: flex;
+}
+.wrapper .content-all.content-contacts .contacts .left-side {
+  width: 50%;
+}
+.wrapper .content-all.content-contacts .contacts .left-side .contact-photo img {
+  max-width: 100%;
+}
+.wrapper .content-all.content-contacts .contacts .right-side {
+  width: 50%;
+}
+.wrapper .content-all.content-contacts .contacts .right-side .contacts-info {
+  margin: 20px;
+}
+.wrapper .content-all.content-contacts .contacts .right-side .contacts-info a {
+  text-decoration: none;
+  outline: none;
+  color: #404040;
+  transition: all 0.5s ease;
+}
+.wrapper .content-all.content-contacts .contacts .right-side .contacts-info a:hover {
+  color: #D5B45B;
+}
+.wrapper footer .contacts-footer {
+  text-align: center;
+}
+.wrapper footer .contacts-footer span {
+  font-size: 14px;
+}
 footer {
   margin: 20px 0;
 }
