@@ -291,6 +291,8 @@ body {
 }
 .wrapper .content-all.content-blog .grid .blog-item.revers .item-preview {
   align-items: start;
+  padding-left: 0;
+  padding-right: 20px;
 }
 .wrapper .content-all.content-blog .grid .blog-item.revers .item-footer {
   left: 0;
