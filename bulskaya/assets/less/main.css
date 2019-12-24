@@ -11,12 +11,16 @@ header {
 header .logo {
   color: #D5B45B;
   font-family: 'Playfair Display', serif;
-  font-size: 2.5em;
   padding: 10px 0;
 }
 header .logo a {
+  font-size: 2.5em;
   text-decoration: none;
   color: inherit;
+}
+header .logo span {
+  display: block;
+  text-align: center;
 }
 header .menu {
   display: flex;
@@ -141,7 +145,7 @@ body {
   min-height: 80vh;
 }
 .wrapper .content-all .grid {
-  padding-top: 75px;
+  padding-top: 95px;
 }
 .wrapper .content-wrapper .slider_content .owl-nav {
   position: absolute;
