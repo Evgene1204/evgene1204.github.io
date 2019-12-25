@@ -176,16 +176,141 @@ body {
 .wrapper .content-wrapper button.owl-prev:hover {
   opacity: 1;
 }
-.content-album .content-header {
+.scrollTop {
+  /* по-умолчанию скрыта */
+  display: none;
+  /* скругяем углы */
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  border-radius: 100%;
+  /* фиксируем позицию кнопки */
+  position: fixed;
+  /* размеры кнопки */
+  width: 60px;
+  height: 60px;
+  /* положение кнопки */
+  right: 1rem;
+  bottom: 1rem;
+  /* вид курсора */
+  cursor: pointer;
+  /* эффект перехода между двумя состояниями кнопки */
+  -webkit-transition: bottom 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: bottom 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+  -ms-transition: bottom 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: bottom 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+  transition: bottom 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+}
+/* смещение кнопки вверх при наведении */
+.scrollTop:hover {
+  bottom: 2rem;
+}
+/* дополнительные элементы офрмления кнопки */
+.scrollTop:before,
+.scrollTop:after {
+  content: "";
+  top: 0;
+  left: 0;
+  background-color: #d5b45b;
+  width: 60px;
+  height: 60px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+  position: absolute;
+  opacity: 0;
+}
+/* определяем имя, тип и скорость анимации лля :before */
+.scrollTop:before {
+  background-color: #d5b45b;
+  -webkit-animation: clickMe 1.8s 333ms infinite ease-out;
+  -moz-animation: clickMe 1.8s 333ms infinite ease-out;
+  animation: clickMe 1.8s 333ms infinite ease-out;
+}
+/* определяем имя, тип и скорость анимации лля :after */
+.scrollTop:after {
+  -webkit-animation: clickMe 1.8s 777ms infinite ease-out;
+  -moz-animation: clickMe 1.8s 777ms infinite ease-out;
+  animation: clickMe 1.8s 777ms infinite ease-out;
+}
+/* формируем вид иконки */
+.scrollTop i {
+  width: 30px;
+  height: 30px;
+  display: block;
+  background: rgba(213, 180, 90, 0.61);
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  font-size: 1.3rem;
+  background-size: 12px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  border-radius: 100%;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  z-index: 100;
+}
+/* анимация */
+@-webkit-keyframes clickMe {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes clickMe {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0);
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes clickMe {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.content-all.content-album {
+  padding-top: 65px;
+}
+.content-all.content-album .content-header {
   position: relative;
 }
-.content-album .content-header .header-photo {
+.content-all.content-album .content-header .header-photo {
   width: 100%;
   height: calc(100vh - 250px);
   background-size: cover;
   background-attachment: fixed;
 }
-.content-album .content-header .header-description {
+.content-all.content-album .content-header .header-description {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -195,40 +320,40 @@ body {
   text-align: right;
   color: #fff;
 }
-.content-album .content-header .header-description p {
+.content-all.content-album .content-header .header-description p {
   margin: 0;
   font-weight: 400;
 }
-.content-album .content {
+.content-all.content-album .content {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-.content-album .content .item {
+.content-all.content-album .content .item {
   width: 60%;
   margin: 15px 0;
   text-align: center;
-  transform: translateY(50px);
+  /*transform: translateY(50px);*/
   transition: all 0.6s ease-in-out;
 }
-.content-album .content .item.visible {
+.content-all.content-album .content .item.visible {
   transform: translate(0);
 }
-.content-album .content .item img {
+.content-all.content-album .content .item img {
   max-width: 100%;
 }
-.content-album .content .item .item-description {
+.content-all.content-album .content .item .item-description {
   margin-top: 0;
 }
-.content-album .content .description {
+.content-all.content-album .content .description {
   width: 45%;
   text-align: center;
 }
-.content-album .content .description .description-header {
+.content-all.content-album .content .description .description-header {
   font-size: 30px;
 }
-.content-album .content .description .description-small {
+.content-all.content-album .content .description .description-small {
   font-size: 17px;
 }
 .wrapper .content-all.content-contacts {
@@ -247,7 +372,7 @@ body {
   width: 50%;
 }
 .wrapper .content-all.content-contacts .contacts .right-side .contacts-info {
-  margin: 20px;
+  margin: 30px 20px;
 }
 .wrapper .content-all.content-contacts .contacts .right-side .contacts-info a {
   text-decoration: none;
@@ -257,6 +382,9 @@ body {
 }
 .wrapper .content-all.content-contacts .contacts .right-side .contacts-info a:hover {
   color: #D5B45B;
+}
+.wrapper .content-all.content-contacts .contacts .right-side .contacts-info .description {
+  text-align: center;
 }
 .wrapper footer .contacts-footer {
   text-align: center;

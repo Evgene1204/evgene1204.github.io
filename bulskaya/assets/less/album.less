@@ -1,67 +1,71 @@
-.content-album {
-  .content-header {
-    position: relative;
+.content-all {
+  &.content-album {
+    padding-top: 65px;
 
-    .header-photo {
-      width: 100%;
-      height: calc(100vh - 250px);
-      background-size: cover;
-      background-attachment: fixed;
-    }
+    .content-header {
+      position: relative;
 
-    .header-description {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      padding: 10px 20px;
-      background: rgba(64, 64, 64, 0.45);
-      width: 100%;
-      text-align: right;
-      color: #fff;
-
-      p {
-        margin: 0;
-        font-weight: 400;
-      }
-    }
-  }
-
-  .content {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-
-    .item {
-      width: 60%;
-      margin: 15px 0;
-      text-align: center;
-      transform: translateY(50px);
-      transition: all .6s ease-in-out;
-
-      &.visible {
-        transform: translate(0);
+      .header-photo {
+        width: 100%;
+        height: calc(100vh - 250px);
+        background-size: cover;
+        background-attachment: fixed;
       }
 
-      img {
-        max-width: 100%;
-      }
+      .header-description {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 10px 20px;
+        background: rgba(64, 64, 64, 0.45);
+        width: 100%;
+        text-align: right;
+        color: #fff;
 
-      .item-description {
-        margin-top: 0;
+        p {
+          margin: 0;
+          font-weight: 400;
+        }
       }
     }
 
-    .description {
-      width: 45%;
-      text-align: center;
+    .content {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
 
-      .description-header {
-        font-size: 30px;
+      .item {
+        width: 60%;
+        margin: 15px 0;
+        text-align: center;
+        /*transform: translateY(50px);*/
+        transition: all .6s ease-in-out;
+
+        &.visible {
+          transform: translate(0);
+        }
+
+        img {
+          max-width: 100%;
+        }
+
+        .item-description {
+          margin-top: 0;
+        }
       }
 
-      .description-small {
-        font-size: 17px;
+      .description {
+        width: 45%;
+        text-align: center;
+
+        .description-header {
+          font-size: 30px;
+        }
+
+        .description-small {
+          font-size: 17px;
+        }
       }
     }
   }
