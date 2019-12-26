@@ -24,7 +24,7 @@ header .logo span {
 }
 header .menu {
   display: flex;
-  width: 70%;
+  width: 66%;
 }
 header .menu nav {
   display: table;
@@ -361,9 +361,18 @@ body {
 }
 .wrapper .content-all.content-contacts .contacts {
   display: flex;
+  width: 60%;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 81vh;
 }
 .wrapper .content-all.content-contacts .contacts .left-side {
   width: 50%;
+}
+.wrapper .content-all.content-contacts .contacts .left-side .contact-photo {
+  width: 85%;
+  margin: auto;
 }
 .wrapper .content-all.content-contacts .contacts .left-side .contact-photo img {
   max-width: 100%;
@@ -372,7 +381,7 @@ body {
   width: 50%;
 }
 .wrapper .content-all.content-contacts .contacts .right-side .contacts-info {
-  margin: 30px 20px;
+  width: 90%;
 }
 .wrapper .content-all.content-contacts .contacts .right-side .contacts-info a {
   text-decoration: none;
@@ -382,6 +391,9 @@ body {
 }
 .wrapper .content-all.content-contacts .contacts .right-side .contacts-info a:hover {
   color: #D5B45B;
+}
+.wrapper .content-all.content-contacts .contacts .right-side .contacts-info .name {
+  margin-top: 0;
 }
 .wrapper .content-all.content-contacts .contacts .right-side .contacts-info .description {
   text-align: center;
@@ -393,7 +405,7 @@ body {
   font-size: 14px;
 }
 .wrapper .content-all.content-blog .grid {
-  width: 70%;
+  width: 60%;
   display: flex;
   margin: auto;
   flex-direction: column;
@@ -403,7 +415,7 @@ body {
   position: relative;
 }
 .wrapper .content-all.content-blog .grid .blog-item .item-photo {
-  width: 40%;
+  width: 45%;
 }
 .wrapper .content-all.content-blog .grid .blog-item .item-photo figure {
   width: 100%;
@@ -416,7 +428,10 @@ body {
   align-items: center;
 }
 .wrapper .content-all.content-blog .grid .blog-item .item-preview p {
-  margin: 0;
+  width: 90%;
+  margin: auto 0 auto auto;
+  font-size: 17px;
+  line-height: 26px;
 }
 .wrapper .content-all.content-blog .grid .blog-item.revers {
   flex-direction: row-reverse;
@@ -425,6 +440,9 @@ body {
   align-items: start;
   padding-left: 0;
   padding-right: 20px;
+}
+.wrapper .content-all.content-blog .grid .blog-item.revers .item-preview p {
+  margin: auto auto auto 0;
 }
 .wrapper .content-all.content-blog .grid .blog-item.revers .item-footer {
   left: 0;
@@ -451,7 +469,7 @@ body {
   font-family: inherit;
 }
 .wrapper .content-all.content-blog .grid .blog-item .item-footer .a-button.learn-more {
-  width: 12rem;
+  width: 9.5rem;
   height: auto;
 }
 .wrapper .content-all.content-blog .grid .blog-item .item-footer .a-button.learn-more .circle {
@@ -459,8 +477,8 @@ body {
   position: relative;
   display: block;
   margin: 0;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background: #D5B45B;
   border-radius: 1.625rem;
 }
@@ -474,7 +492,7 @@ body {
 }
 .wrapper .content-all.content-blog .grid .blog-item .item-footer .a-button.learn-more .circle .icon.arrow {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  left: 0.625rem;
+  left: 0.325rem;
   width: 1.125rem;
   height: 0.125rem;
   background: none;
@@ -501,8 +519,9 @@ body {
   margin: 0 0 0 1.85rem;
   color: #282936;
   font-weight: 700;
-  line-height: 1.6;
+  line-height: 1.3;
   text-align: center;
+  font-size: 14px;
 }
 .wrapper .content-all.content-blog .grid .blog-item .item-footer .a-button:hover .circle {
   width: 100%;
