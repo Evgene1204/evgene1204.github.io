@@ -418,13 +418,13 @@ body {
   position: relative;
 }
 .wrapper .content-all.content-blog .grid .blog-item .item-photo {
-  width: 45%;
+  width: 50%;
 }
 .wrapper .content-all.content-blog .grid .blog-item .item-photo figure {
   width: 100%;
 }
 .wrapper .content-all.content-blog .grid .blog-item .item-photo figure.effect-lily img {
-  width: calc(115% + 50px);
+  width: calc(110% + 50px);
 }
 .wrapper .content-all.content-blog .grid .blog-item .item-preview {
   padding-left: 20px;
