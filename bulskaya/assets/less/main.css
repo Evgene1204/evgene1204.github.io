@@ -345,6 +345,7 @@ body {
 }
 .content-all.content-album .content .item .item-description {
   margin-top: 0;
+  line-height: 26px;
 }
 .content-all.content-album .content .description {
   width: 45%;
@@ -355,6 +356,7 @@ body {
 }
 .content-all.content-album .content .description .description-small {
   font-size: 17px;
+  line-height: 26px;
 }
 .wrapper .content-all.content-contacts {
   padding-top: 67px;
@@ -397,6 +399,7 @@ body {
 }
 .wrapper .content-all.content-contacts .contacts .right-side .contacts-info .description {
   text-align: center;
+  line-height: 25px;
 }
 .wrapper footer .contacts-footer {
   text-align: center;
