@@ -423,6 +423,9 @@ body {
 .wrapper .content-all.content-blog .grid .blog-item .item-photo figure {
   width: 100%;
 }
+.wrapper .content-all.content-blog .grid .blog-item .item-photo figure.effect-lily img {
+  width: calc(115% + 50px);
+}
 .wrapper .content-all.content-blog .grid .blog-item .item-preview {
   padding-left: 20px;
   width: 60%;
