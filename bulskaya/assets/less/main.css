@@ -680,7 +680,7 @@ footer .footer_contacts .mail a:hover,
 footer .footer_contacts .telephone a:hover {
   color: #D5B45B;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1250px) {
   .hamburger {
     display: block;
   }
