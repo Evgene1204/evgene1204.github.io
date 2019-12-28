@@ -679,7 +679,7 @@ footer .footer_contacts .mail a:hover,
 footer .footer_contacts .telephone a:hover {
   color: #D5B45B;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1400px) {
   .hamburger {
     display: block;
   }
