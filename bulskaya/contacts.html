@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/fonts/icomoon/style.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/less/main.css">
+    <script src="assets/js/lib/jquery3.4.1.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -26,6 +28,20 @@
                 </ul>
             </nav>
         </div>
+        <div class="hamburger">
+            <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+                <path
+                        class="line top"
+                        d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+                <path
+                        class="line middle"
+                        d="m 30,50 h 40" />
+                <path
+                        class="line bottom"
+                        d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+            </svg>
+
+        </div>
     </header>
     <div class="content-all content-contacts">
         <div class="contacts">
@@ -38,7 +54,6 @@
                 <div class="contacts-info">
                     <h2 class="name text-center">Darya Bulskaya</h2>
                     <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    <br/>
                     <p><i class="fa fa-instagram" aria-hidden="true"></i> <a href="#">bulskaya</a></p>
                     <p><i class="fa fa-vk" aria-hidden="true"></i> <a href="#">vk.com/bulskaya</a></p>
                     <p><i class="fa fa-whatsapp" aria-hidden="true"></i> <a href="#">+375 29 826 8975</a></p>
@@ -54,5 +69,10 @@
         </div>
     </footer>
 </div>
+<script>
+    $('.hamburger').on('click', function () {
+        $('.menu').toggleClass('active');
+    })
+</script>
 </body>
 </html>

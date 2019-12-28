@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1400px){
+@media only screen and (max-width: 1200px){
   .hamburger {
     display: block;
   }
@@ -144,6 +144,36 @@
           }
         }
       }
+
+      &.content-contacts {
+        height: auto;
+        min-height: auto;
+
+        .contacts {
+          width: 100%;
+          flex-direction: column;
+          margin-top: 30px;
+          height: auto;
+
+          .left-side {
+            width: 100%;
+          }
+
+          .right-side {
+            width: 100%;
+
+            .contacts-info {
+              width: 90%;
+              margin: auto;
+              margin-top: 20px;
+
+              .description {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
     }
     .content-wrapper {
       .slider_content {
@@ -169,6 +199,19 @@
   .grid {
     figure {
       height: 300px;
+    }
+  }
+}
+
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .wrapper {
+    .content-all {
+      &.content-blog {
+        .grid {
+          width: 90%;
+        }
+      }
     }
   }
 }
