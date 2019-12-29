@@ -680,7 +680,7 @@ footer .footer_contacts .mail a:hover,
 footer .footer_contacts .telephone a:hover {
   color: #D5B45B;
 }
-@media only screen and (max-width: 1440px) {
+@media (max-width: 1024px) {
   .hamburger {
     display: block;
   }
@@ -714,7 +714,7 @@ footer .footer_contacts .telephone a:hover {
     transform: translateX(0);
   }
   .wrapper .content-all {
-    height: 77vh;
+    height: 80vh;
     min-height: 77vh;
   }
   .wrapper .content-all.content-portfolio {

@@ -100,6 +100,10 @@
     $('.hamburger').on('click', function () {
         $('.menu').toggleClass('active');
     })
+
+    $('body').on('scroll', function () {
+        console.log(window.pageYOffset);
+    })
 </script>
 </body>
 </html>
