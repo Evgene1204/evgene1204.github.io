@@ -10,7 +10,7 @@ header {
 
   .logo {
     color: #D5B45B;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Quicksand', sans-serif;
     padding: 10px 0;
 
     a {
@@ -58,7 +58,7 @@ header {
           & > li {
             float: left;
             position: relative;
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Quicksand', sans-serif;
 
             .submenu {
               background: #273037;
@@ -83,6 +83,14 @@ header {
               li:last-child {
                 a { border-bottom: none; }
               }
+
+              li {
+                &.active {
+                  a {
+                    color: #D5B45B;
+                  }
+                }
+              }
             }
 
             & > a, & > span {
@@ -98,6 +106,12 @@ header {
               font-family: "FontAwesome";
               color: inherit;
               margin-left: 10px;
+            }
+
+            &.active {
+              a {
+                color: #D5B45B;
+              }
             }
           }
 
