@@ -9,7 +9,13 @@
     <link rel="stylesheet" href="assets/fonts/icomoon/style.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/lib/owl.carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/lib/gallery/lightgallery.css">
     <link rel="stylesheet" href="assets/less/main.css">
+    <script src="assets/js/lib/gallery/lightgallery.js"></script>
+    <script src="assets/js/lib/gallery/lg-fullscreen.min.js"></script>
+    <script src="assets/js/lib/gallery/lg-thumbnail.min.js"></script>
+    <script src="assets/js/lib/gallery/lg-zoom.js"></script>
+    <script src="assets/js/lib/gallery/lg-autoplay.js"></script>
     <script src="assets/js/lib/onScreen/index.js"></script>
 </head>
 <body>
@@ -31,6 +37,20 @@
                 </ul>
             </nav>
         </div>
+        <div class="hamburger">
+            <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+                <path
+                        class="line top"
+                        d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+                <path
+                        class="line middle"
+                        d="m 30,50 h 40" />
+                <path
+                        class="line bottom"
+                        d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+            </svg>
+
+        </div>
     </header>
     <div class="content-all content-album">
         <div class="content-header">
@@ -40,18 +60,18 @@
                 <p class="date">2019.08.26</p>
             </div>
         </div>
-        <div class="content">
+        <div class="content" id="gallery">
             <div class="description">
                 <p class="description-header">Header</p>
                 <p class="description-small">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
-            <div class="item">
+            <div class="item" data-src="assets/images/14021.jpg" data-sub-html=".item-description">
                 <img src="assets/images/14021.jpg" alt="">
                 <p class="item-description">(OPTIONAL) Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when</p>
             </div>
-            <div class="item"><img src="assets/images/13727.jpg" alt=""></div>
-            <div class="item"><img src="assets/images/13947.jpg" alt=""></div>
-            <div class="item"><img src="assets/images/13922.jpg" alt=""></div>
+            <div class="item" data-src="assets/images/13727.jpg"><img src="assets/images/13727.jpg" alt=""></div>
+            <div class="item" data-src="assets/images/13947.jpg"><img src="assets/images/13947.jpg" alt=""></div>
+            <div class="item" data-src="assets/images/13922.jpg"><img src="assets/images/13922.jpg" alt=""></div>
         </div>
         <div class="content-footer"></div>
     </div>
@@ -71,5 +91,15 @@
         </div>
     </footer>
 </div>
+<script>
+    $('.hamburger').on('click', function () {
+        $('.menu').toggleClass('active');
+    })
+
+    lightGallery(document.getElementById('gallery'), {
+        selector: '.item',
+        subHtmlSelectorRelative: true
+    });
+</script>
 </body>
 </html>

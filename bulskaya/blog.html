@@ -20,7 +20,7 @@
         <div class="menu">
             <nav>
                 <ul class="top_menu">
-                    <li><span class="submenu-link">Porfolio</span>
+                    <li><span class="submenu-link">Portfolio</span>
                         <ul class="submenu">
                             <li><a href="portfolio.html">Fusion</a></li>
                             <li><a href="">Love story</a></li>
@@ -31,6 +31,20 @@
                     <li><a href="tel:+375298268975">+375 29 826 8975</a></li>
                 </ul>
             </nav>
+        </div>
+        <div class="hamburger">
+            <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+                <path
+                        class="line top"
+                        d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+                <path
+                        class="line middle"
+                        d="m 30,50 h 40" />
+                <path
+                        class="line bottom"
+                        d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+            </svg>
+
         </div>
     </header>
     <div class="content-all content-blog">
@@ -82,6 +96,30 @@
                 </div>
             </div>
             <div class="del"></div>
+            <div class="blog-item">
+                <div class="item-photo">
+                    <figure class="effect-lily">
+                        <img src="assets/images/14710.jpg" alt="img01"/>
+                        <figcaption>
+                            <h2>Nice <span>Lily</span></h2>
+                            <p>Lily likes to play with crayons and pencils</p>
+                            <a href="blog-item.html">View more</a>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="item-preview">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+                <div class="item-footer">
+                    <a href="blog-item.html" class="a-button learn-more">
+                        <span class="circle">
+                          <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Read more...</span>
+                    </a>
+                </div>
+            </div>
+            <div class="del"></div>
         </div>
     </div>
     <a href="#" title="Go Top" class="scrollTop"><i class="fa fa-angle-double-up"></i></a>
@@ -100,5 +138,11 @@
         </div>
     </footer>
 </div>
+
+<script>
+    $('.hamburger').on('click', function () {
+        $('.menu').toggleClass('active');
+    })
+</script>
 </body>
 </html>
