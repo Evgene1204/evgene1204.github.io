@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Poiret One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Poiret One'), local('PoiretOne-Regular'), url(https://fonts.gstatic.com/s/poiretone/v8/UqyVK80NJXN4zfRgbdfbo55cUg.ttf) format('truetype');
+}
 header {
   display: flex;
   align-items: center;
@@ -10,7 +17,7 @@ header {
 }
 header .logo {
   color: #D5B45B;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Poiret One', cursive;
   padding: 10px 0;
 }
 header .logo a {
@@ -54,7 +61,7 @@ header .menu nav ul.top_menu:after {
 header .menu nav ul.top_menu > li {
   float: left;
   position: relative;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Poiret One', cursive;
 }
 header .menu nav ul.top_menu > li .submenu {
   background: #273037;
@@ -108,16 +115,9 @@ header .menu nav ul.top_menu li span:hover {
   color: #D5B45B;
   cursor: pointer;
 }
-@font-face {
-  font-family: 'Quicksand';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/quicksand/v19/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkKEo58a-xw.ttf) format('truetype');
-}
 body {
   margin: 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Poiret One', cursive;
   font-weight: 300;
 }
 .my-icon {
@@ -408,6 +408,7 @@ body {
 .content-all.content-album .content .description {
   width: 45%;
   text-align: center;
+  font-family: 'Poiret One', cursive;
 }
 .content-all.content-album .content .description .description-header {
   font-size: 30px;
