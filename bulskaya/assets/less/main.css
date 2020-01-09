@@ -156,6 +156,9 @@ body {
 .wrapper .content-all .grid {
   padding-top: 95px;
 }
+.wrapper .content-all .grid figure {
+  margin: -0.16em;
+}
 .wrapper .content-wrapper .slider_content .owl-nav {
   position: absolute;
   width: 100%;
@@ -440,6 +443,8 @@ body {
 }
 .wrapper .content-all.content-contacts .contacts .right-side {
   width: 50%;
+  display: flex;
+  align-items: center;
 }
 .wrapper .content-all.content-contacts .contacts .right-side .contacts-info {
   width: 90%;
@@ -691,6 +696,9 @@ footer .footer_contacts .telephone a:hover {
   .hamburger {
     display: block;
   }
+  figure.effect-lily img {
+    width: calc(100% + 100px);
+  }
   header {
     justify-content: space-between;
   }
@@ -835,7 +843,7 @@ footer .footer_contacts .telephone a:hover {
   }
   .wrapper .content-wrapper .slider_content {
     display: flex;
-    height: 90%;
+    height: 100%;
     align-items: center;
   }
   .wrapper .content-wrapper .slider_content .main_slider {
