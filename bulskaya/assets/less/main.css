@@ -129,24 +129,6 @@ body {
 .text-center {
   text-align: center;
 }
-.slider_content .main_slider .owl-item .item {
-  width: 100%;
-  height: calc(100vh - 200px);
-  background-size: cover;
-  background-position: 100%;
-}
-.slider_content .main_slider .owl-item .item:before {
-  content: "";
-  background: #020202;
-  opacity: 0.8;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transition: all 0.5s ease-in-out;
-}
-.slider_content .main_slider .owl-item.active.center .item:before {
-  opacity: 0;
-}
 .wrapper {
   height: 100vh;
 }
@@ -159,10 +141,31 @@ body {
 .wrapper .content-all .grid figure {
   margin: -0.16em;
 }
+.wrapper .content-wrapper .slider_content .main_slider {
+  display: flex;
+  align-items: center;
+}
+.wrapper .content-wrapper .slider_content .main_slider .owl-item .item {
+  width: 100%;
+  height: calc(100vh - 200px);
+  background-size: cover;
+  background-position: 100%;
+}
+.wrapper .content-wrapper .slider_content .main_slider .owl-item .item:before {
+  content: "";
+  background: #020202;
+  opacity: 0.8;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+.wrapper .content-wrapper .slider_content .main_slider .owl-item.active.center .item:before {
+  opacity: 0;
+}
 .wrapper .content-wrapper .slider_content .owl-nav {
   position: absolute;
   width: 100%;
-  top: 45%;
 }
 .wrapper .content-wrapper button.owl-next {
   font-size: 50px;
@@ -733,7 +736,7 @@ footer .footer_contacts .telephone a:hover {
     min-height: 77vh;
   }
   .wrapper .content-all.content-wrapper {
-    height: 75vh;
+    height: 70vh;
     min-height: 70vh;
   }
   .wrapper .content-all.content-portfolio {
@@ -868,6 +871,20 @@ footer .footer_contacts .telephone a:hover {
 @media (min-width: 1200px) and (max-width: 1600px) {
   .wrapper .content-all.content-blog .grid {
     width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper .content-wrapper .slider_content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  .wrapper .content-wrapper .slider_content .main_slider {
+    display: flex;
+    align-items: center;
+  }
+  .wrapper .content-wrapper .slider_content .main_slider .owl-item .item {
+    height: 245px;
   }
 }
 /*# sourceMappingURL=main.css.map */

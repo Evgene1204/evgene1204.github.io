@@ -53,7 +53,7 @@
       min-height: 77vh;
 
       &.content-wrapper {
-        height: 75vh;
+        height: 70vh;
         min-height: 70vh;
       }
 
@@ -239,6 +239,29 @@
       &.content-blog {
         .grid {
           width: 90%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    .content-wrapper {
+      .slider_content {
+        display: flex;
+        height: 100%;
+        align-items: center;
+
+        .main_slider {
+          display: flex;
+          align-items: center;
+
+          .owl-item {
+            .item {
+              height: 245px;
+            }
+          }
         }
       }
     }
