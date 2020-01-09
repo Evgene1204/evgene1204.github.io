@@ -725,7 +725,8 @@ footer .footer_contacts .telephone a:hover {
     min-height: 77vh;
   }
   .wrapper .content-all.content-wrapper {
-    height: 85vh;
+    height: 75vh;
+    min-height: 70vh;
   }
   .wrapper .content-all.content-portfolio {
     height: auto;
@@ -831,6 +832,14 @@ footer .footer_contacts .telephone a:hover {
   }
   .wrapper .content-all.content-contacts .contacts .right-side .contacts-info .description {
     margin-bottom: 0;
+  }
+  .wrapper .content-wrapper .slider_content {
+    display: flex;
+    height: 90%;
+    align-items: center;
+  }
+  .wrapper .content-wrapper .slider_content .main_slider .owl-item .item {
+    height: 300px;
   }
   .wrapper .content-wrapper .slider_content .owl-nav {
     top: 50%;

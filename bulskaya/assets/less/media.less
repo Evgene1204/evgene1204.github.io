@@ -44,7 +44,8 @@
       min-height: 77vh;
 
       &.content-wrapper {
-        height: 85vh;
+        height: 75vh;
+        min-height: 70vh;
       }
 
       &.content-portfolio {
@@ -185,6 +186,18 @@
     }
     .content-wrapper {
       .slider_content {
+        display: flex;
+        height: 90%;
+        align-items: center;
+
+        .main_slider {
+          .owl-item {
+            .item {
+              height: 300px;
+            }
+          }
+        }
+
         .owl-nav {
           top: 50%;
         }
