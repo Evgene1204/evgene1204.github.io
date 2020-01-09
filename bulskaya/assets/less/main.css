@@ -838,11 +838,12 @@ footer .footer_contacts .telephone a:hover {
     height: 90%;
     align-items: center;
   }
+  .wrapper .content-wrapper .slider_content .main_slider {
+    display: flex;
+    align-items: center;
+  }
   .wrapper .content-wrapper .slider_content .main_slider .owl-item .item {
     height: 300px;
-  }
-  .wrapper .content-wrapper .slider_content .owl-nav {
-    top: 50%;
   }
   .wrapper .content-wrapper .slider_content button.owl-prev {
     left: 2%;
