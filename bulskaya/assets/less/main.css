@@ -1,9 +1,29 @@
+/* cyrillic */
 @font-face {
   font-family: 'Poiret One';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Poiret One'), local('PoiretOne-Regular'), url(https://fonts.gstatic.com/s/poiretone/v8/UqyVK80NJXN4zfRgbdfbo55cUg.ttf) format('truetype');
+  src: local('Poiret One'), local('PoiretOne-Regular'), url(../fonts/poiterone/poiterone.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poiret One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Poiret One'), local('PoiretOne-Regular'), url(../fonts/poiterone/UqyVK80NJXN4zfRgbdfbo5BcV_cx.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poiret One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Poiret One'), local('PoiretOne-Regular'), url(../fonts/poiterone/UqyVK80NJXN4zfRgbdfbo55cVw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 header {
   display: flex;
@@ -428,43 +448,47 @@ body {
 }
 .wrapper .content-all.content-contacts .contacts {
   display: flex;
-  width: 60%;
+  width: 100%;
   margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
-  height: 81vh;
+  color: #404040;
 }
-.wrapper .content-all.content-contacts .contacts .left-side {
-  width: 50%;
+.wrapper .content-all.content-contacts .contacts .preview-video {
+  margin-right: 20px;
+  width: 70%;
 }
-.wrapper .content-all.content-contacts .contacts .left-side .contact-photo {
-  width: 85%;
-  margin: auto;
-}
-.wrapper .content-all.content-contacts .contacts .left-side .contact-photo img {
+.wrapper .content-all.content-contacts .contacts .preview-video .contact-video {
   max-width: 100%;
+  width: 100%;
 }
-.wrapper .content-all.content-contacts .contacts .right-side {
-  width: 50%;
+.wrapper .content-all.content-contacts .contacts .contacts-info {
+  width: 30%;
+  padding-left: 20px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-.wrapper .content-all.content-contacts .contacts .right-side .contacts-info {
-  width: 90%;
+.wrapper .content-all.content-contacts .contacts .contacts-info .info {
+  font-size: 21px;
 }
-.wrapper .content-all.content-contacts .contacts .right-side .contacts-info a {
+.wrapper .content-all.content-contacts .contacts .contacts-info p {
+  margin-bottom: 0;
+}
+.wrapper .content-all.content-contacts .contacts .contacts-info a {
   text-decoration: none;
   outline: none;
   color: #404040;
   transition: all 0.5s ease;
 }
-.wrapper .content-all.content-contacts .contacts .right-side .contacts-info a:hover {
+.wrapper .content-all.content-contacts .contacts .contacts-info a:hover {
   color: #D5B45B;
 }
-.wrapper .content-all.content-contacts .contacts .right-side .contacts-info .name {
+.wrapper .content-all.content-contacts .contacts .contacts-info .name {
   margin-top: 0;
 }
-.wrapper .content-all.content-contacts .contacts .right-side .contacts-info .description {
+.wrapper .content-all.content-contacts .contacts .contacts-info .description {
   text-align: center;
   line-height: 25px;
   margin-bottom: 20px;
@@ -699,6 +723,10 @@ footer .footer_contacts .telephone a:hover {
   .hamburger {
     display: block;
   }
+  .wrapper .content-all.content-album .content-header .header-photo {
+    background-size: cover;
+    height: 200px;
+  }
   figure.effect-lily img {
     width: calc(100% + 100px);
   }
@@ -818,31 +846,27 @@ footer .footer_contacts .telephone a:hover {
     font-size: 15px;
   }
   .wrapper .content-all.content-contacts {
-    height: auto;
+    height: 100vh;
     min-height: auto;
   }
   .wrapper .content-all.content-contacts .contacts {
     width: 100%;
     flex-direction: column;
     margin-top: 30px;
-    height: auto;
+    height: 100vh;
   }
-  .wrapper .content-all.content-contacts .contacts .left-side {
+  .wrapper .content-all.content-contacts .contacts .preview-video {
     width: 100%;
+    margin-right: 0;
   }
-  .wrapper .content-all.content-contacts .contacts .left-side .contact-photo {
-    width: 43%;
-  }
-  .wrapper .content-all.content-contacts .contacts .right-side {
+  .wrapper .content-all.content-contacts .contacts .contacts-info {
     width: 100%;
-  }
-  .wrapper .content-all.content-contacts .contacts .right-side .contacts-info {
-    width: 90%;
     margin: auto;
     margin-top: 20px;
+    padding-left: 0;
   }
-  .wrapper .content-all.content-contacts .contacts .right-side .contacts-info .description {
-    margin-bottom: 0;
+  .wrapper .content-all.content-contacts .contacts .contacts-info .info {
+    font-size: 16px;
   }
   .wrapper .content-wrapper .slider_content {
     display: flex;
@@ -885,6 +909,29 @@ footer .footer_contacts .telephone a:hover {
   }
   .wrapper .content-wrapper .slider_content .main_slider .owl-item .item {
     height: 245px;
+  }
+  .wrapper .content-contacts {
+    height: 100vh;
+    min-height: auto;
+  }
+  .wrapper .content-contacts .contacts {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 30px;
+    height: 100vh;
+  }
+  .wrapper .content-contacts .contacts .preview-video {
+    width: 100%;
+    margin-right: 0;
+  }
+  .wrapper .content-contacts .contacts .contacts-info {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    padding-left: 0;
+  }
+  .wrapper .content-contacts .contacts .contacts-info .info {
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=main.css.map */
