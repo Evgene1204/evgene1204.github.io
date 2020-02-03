@@ -159,7 +159,8 @@ body {
   padding-top: 95px;
 }
 .wrapper .content-all .grid figure {
-  margin: -0.16111em;
+  margin: -0.18em;
+  margin-top: 0;
 }
 .wrapper .content-wrapper .slider_content .main_slider {
   display: flex;
