@@ -5,32 +5,37 @@
 
       .contacts {
         display: flex;
-        width: 60%;
+        width: 100%;
         margin-top: 40px;
         margin-left: auto;
         margin-right: auto;
-        height: 81vh;
+        color: #404040;
 
-        .left-side {
-          width: 50%;
+          .preview-video {
+            margin-right: 20px;
+            width: 70%;
 
-          .contact-photo {
-            width: 85%;
-            margin: auto;
-
-            img {
+            .contact-video {
               max-width: 100%;
+              width: 100%;
             }
           }
-        }
-
-        .right-side {
-          width: 50%;
-          display: flex;
-          align-items: center;
 
           .contacts-info {
-            width: 90%;
+            width: 30%;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .info {
+              font-size: 21px;
+            }
+
+            p {
+              margin-bottom: 0;
+            }
 
             a {
               text-decoration: none;
@@ -52,7 +57,6 @@
               line-height: 25px;
               margin-bottom: 20px;
             }
-          }
         }
       }
     }
