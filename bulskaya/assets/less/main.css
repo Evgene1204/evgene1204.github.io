@@ -110,6 +110,10 @@ header .menu nav ul.top_menu > li:hover .submenu {
   opacity: 1;
   transform: scaleY(1);
 }
+header .menu nav ul.top_menu > li:focus .submenu {
+  opacity: 1;
+  transform: scaleY(1);
+}
 header .menu nav ul.top_menu li a:hover,
 header .menu nav ul.top_menu li span:hover {
   color: #D5B45B;
@@ -271,6 +275,20 @@ body {
   left: 15px;
   top: 15px;
   z-index: 100;
+}
+.created-by {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 40px;
+}
+.created-by a {
+  text-decoration: none;
+  outline: none;
+  color: #404040;
+  transition: all 0.5s ease;
+}
+.created-by a:hover {
+  color: #D5B45B;
 }
 /* анимация */
 @-webkit-keyframes clickMe {
@@ -695,12 +713,33 @@ footer .footer_contacts .mail a:hover,
 footer .footer_contacts .telephone a:hover {
   color: #D5B45B;
 }
+@media (max-width: 1440px) {
+  figure.effect-lily img {
+    width: calc(100% + 130px);
+    max-width: 135%;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .wrapper .content-all.content-blog .grid {
+    width: 90%;
+  }
+  .wrapper .content-wrapper .slider_content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  .wrapper .content-wrapper .slider_content .main_slider {
+    display: flex;
+    align-items: center;
+  }
+  .wrapper .content-wrapper .slider_content .main_slider .owl-item .item {
+    height: 700px;
+    background-position: center;
+  }
+}
 @media (max-width: 1024px) {
   .hamburger {
     display: block;
-  }
-  figure.effect-lily img {
-    width: calc(100% + 100px);
   }
   header {
     justify-content: space-between;
@@ -866,11 +905,6 @@ footer .footer_contacts .telephone a:hover {
   }
   .grid figure {
     height: 300px;
-  }
-}
-@media (min-width: 1200px) and (max-width: 1600px) {
-  .wrapper .content-all.content-blog .grid {
-    width: 90%;
   }
 }
 @media (max-width: 768px) {
