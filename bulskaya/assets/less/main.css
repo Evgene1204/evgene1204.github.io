@@ -738,13 +738,22 @@ footer .footer_contacts .mail a:hover,
 footer .footer_contacts .telephone a:hover {
   color: #D5B45B;
 }
-@media (max-width: 1440px) {
+@media (max-width: 1024px) {
+  .hamburger {
+    display: block;
+  }
+  .wrapper .content-all.content-album .content-header .header-photo {
+    background-size: cover;
+    height: 200px;
+  }
+}
+@media (max-width: 1024px) and (max-width: 1440px) {
   figure.effect-lily img {
     width: calc(100% + 130px);
     max-width: 135%;
   }
 }
-@media (min-width: 1200px) and (max-width: 1600px) {
+@media (max-width: 1024px) and (min-width: 1200px) and (max-width: 1600px) {
   .wrapper .content-all.content-blog .grid {
     width: 90%;
   }
@@ -762,16 +771,9 @@ footer .footer_contacts .telephone a:hover {
     background-position: center;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (max-width: 1024px) {
   .hamburger {
     display: block;
-  }
-  .wrapper .content-all.content-album .content-header .header-photo {
-    background-size: cover;
-    height: 200px;
-  }
-  figure.effect-lily img {
-    width: calc(100% + 100px);
   }
   header {
     justify-content: space-between;
@@ -935,7 +937,7 @@ footer .footer_contacts .telephone a:hover {
     height: 300px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) and (max-width: 768px) {
   .wrapper .content-wrapper .slider_content {
     display: flex;
     height: 100%;
